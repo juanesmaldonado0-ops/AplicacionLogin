@@ -2,12 +2,12 @@
 <project version="4">
   <component name="deploymentTargetSelector">
     <selectionStates>
-      <SelectionState runConfigName="Unnamed">
+      <SelectionState runConfigName="app">
         <option name="selectionMode" value="DROPDOWN" />
-        <DropdownSelection timestamp="2025-04-11T00:35:25.558960400Z">
+        <DropdownSelection timestamp="2025-04-21T05:06:13.059163800Z">
           <Target type="DEFAULT_BOOT">
             <handle>
-              <DeviceId pluginId="PhysicalDevice" identifier="serial=AC4VVB4809000361" />
+              <DeviceId pluginId="LocalEmulator" identifier="path=C:\Users\Zoltham The Raven\.android\avd\Medium_Phone.avd" />
             </handle>
           </Target>
         </DropdownSelection>

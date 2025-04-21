@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/azul"
+    android:padding="16dp">
+
+    <!-- Pantalla 1: Dias -->
+
+    <ImageView
+        android:id="@+id/imgCorazones"
+        android:layout_width="wrap_content"
+        android:layout_height="194dp"
+        android:layout_marginTop="32dp"
+        android:background="#00FFFFFF"
+        android:src="@drawable/ico_heart_p" />
+
+    <TextView
+        android:id="@+id/txtDia"
+        android:layout_width="wrap_content"
+        android:layout_height="73dp"
+        android:layout_alignStart="@+id/imgCorazones"
+        android:layout_alignTop="@+id/imgCorazones"
+        android:layout_alignEnd="@+id/imgCorazones"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="170dp"
+        android:layout_marginTop="51dp"
+        android:layout_marginEnd="174dp"
+        android:fontFamily="@font/federant"
+        android:text="9"
+        android:textColor="#202F71"
+        android:textSize="68sp" />
+
+    <TextView
+        android:id="@+id/txtMensajeDia"
+        android:layout_width="wrap_content"
+        android:layout_height="312dp"
+        android:layout_below="@+id/imgCorazones"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="47dp"
+        android:layout_marginBottom="130dp"
+        android:fontFamily="@font/carattere"
+        android:text="9 días escribiendo tu historia
+ Cada palabra ha sido
+un paso en tu camino de crecimiento.
+ Sigue adelante,
+Sigue escribiendo, sigue creciendo.
+Estamos aquí contigo
+y estamos orgullosos de ti "
+        android:textAlignment="center"
+        android:textColor="#202F71"
+        android:textSize="35sp" />

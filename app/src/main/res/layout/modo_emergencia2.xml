@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/azul"
+    android:padding="16dp">
+
+    <!-- Campo de texto y botón enviar -->
+
+    <EditText
+        android:id="@+id/inputMensaje"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="-19dp"
+        android:layout_marginBottom="86dp"
+        android:layout_toStartOf="@+id/btnEnviar"
+        android:background="@drawable/roundstyle"
+        android:hint="Escribe un mensaje"
+        android:padding="12dp" />
+
+    <ImageButton
+        android:id="@+id/btnEnviar"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="80dp"
+        android:src="@drawable/ic_enviar"
+        android:background="@null"
+        android:contentDescription="Enviar mensaje"/>
+
+    <!-- Botón Finalizar -->
+    <Button
+        android:id="@+id/btnFinalizar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="FINALIZAR"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="#CBD8E0"
+        android:textColor="#000"/>
+
+    <TextView
+        android:id="@+id/textView32"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/roundstyle_azul"
+        android:fontFamily="@font/old_italic"
+        android:text="Habla via Telefonica Con un Psicologo"
+        android:textAlignment="center"
+        android:textSize="24sp" />
+
+</RelativeLayout>
