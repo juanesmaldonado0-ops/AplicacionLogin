@@ -6,8 +6,6 @@
     android:background="@drawable/azul"
     android:padding="16dp">
 
-    <!-- Pantalla 1: Dias -->
-
     <ImageView
         android:id="@+id/imgCorazones"
         android:layout_width="wrap_content"
@@ -51,3 +49,4 @@ y estamos orgullosos de ti "
         android:textAlignment="center"
         android:textColor="#202F71"
         android:textSize="35sp" />
+</RelativeLayout>

@@ -12,7 +12,12 @@
           "package_name": "com.example.aplicacionlogin"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "794418744318-c4pntgs08gekfkb3olcqtt7pejonbctf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyCm2IJgKzZZ_KNLz_0RlTvYXGc3enZm3dM"
@@ -20,7 +25,12 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "794418744318-c4pntgs08gekfkb3olcqtt7pejonbctf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     },
@@ -31,7 +41,12 @@
           "package_name": "com.healthyheart.healthyheart"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "794418744318-c4pntgs08gekfkb3olcqtt7pejonbctf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyCm2IJgKzZZ_KNLz_0RlTvYXGc3enZm3dM"
@@ -39,7 +54,12 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "794418744318-c4pntgs08gekfkb3olcqtt7pejonbctf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }

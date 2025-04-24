@@ -8,8 +8,6 @@
     android:background="@drawable/fondo"
     android:padding="24dp">
 
-    <!-- Usa un fondo tipo acuarela -->
-
     <TextView
         android:id="@+id/titulo"
         android:layout_width="wrap_content"
@@ -54,8 +52,3 @@ de lo lejos que has llegado"
         android:layout_marginTop="32dp"
         android:backgroundTint="#CBD8E0"/>
 </LinearLayout>
-
-    <!--
-        Este es un comentario multilínea
-        que explica la sección de botones
-    -->

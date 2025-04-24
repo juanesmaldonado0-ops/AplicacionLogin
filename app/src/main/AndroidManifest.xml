@@ -3,6 +3,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.aplicacionlogin">
 
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" />
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -15,29 +20,65 @@
         tools:targetApi="31">
         <activity
             android:name=".activity_registro"
+            android:screenOrientation="portrait"
             android:exported="false" />
-
         <activity
             android:name=".frases"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".vaso"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".reflexiones"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".videos"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".biblioteca"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".bienvenida"
             android:exported="false" />
+        <activity
+            android:name=".DiarioActivity"
+            android:screenOrientation="portrait"
+            android:exported="false" />
+        <activity
+            android:name=".Diario_Menu"
+            android:screenOrientation="portrait"
+            android:exported="false" />
+        <activity
+            android:name=".DiasDiarioActivity"
+            android:screenOrientation="portrait"
+            android:exported="false" />
+        <activity
+            android:name=".FrasesReflexionActivity"
+            android:screenOrientation="portrait"
+            android:exported="false" />
+        <activity
+            android:name=".VerRegistrosActivity"
+            android:screenOrientation="portrait"
+            android:exported="false" />
+        <activity
+            android:name=".EscribirDiarioActivity"
+            android:screenOrientation="portrait"
+            android:exported="false" />
+        <activity
+            android:name=".EmergenciaActivity"
+            android:screenOrientation="portrait"
+            android:exported="false" />
+        <activity
+            android:name=".LlamarActivity"
+            android:screenOrientation="portrait"
+            android:exported="false" />
 
-
-        <activity android:name=".ActivityRegistro" /> <!-- Pantalla principal -->
+        <activity android:name=".ActivityRegistro" />
         <activity
             android:name=".MainActivity"
             android:exported="true">

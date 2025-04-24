@@ -3,6 +3,7 @@ package com.example.aplicacionlogin
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageButton
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -36,6 +37,16 @@ class biblioteca : AppCompatActivity() {
             // Intent para redirigir a la actividad Frases
             val intent = Intent(this, frases::class.java)
             startActivity(intent) // Iniciar la actividad Frases
+        }
+        val btnDiario = findViewById<ImageButton>(R.id.imageButton2)
+        btnDiario.setOnClickListener {
+            val intent = Intent(this, DiarioActivity::class.java)
+            startActivity(intent)
+        }
+        val btnEmergencia = findViewById<ImageButton>(R.id.imageButton3)
+        btnEmergencia.setOnClickListener {
+            val intent = Intent(this, EmergenciaActivity::class.java)
+            startActivity(intent)
         }
 
         // Ajuste de las barras del sistema para Edge to Edge
