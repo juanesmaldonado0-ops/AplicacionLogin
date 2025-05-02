@@ -37,8 +37,14 @@ class ActivityRegistro : AppCompatActivity() {
             val identificacionTexto = identificacion.text.toString().trim()
             val apoyoTexto = apoyoDeseado.text.toString().trim()
 
-            if (correoTexto.isEmpty() || contrasenaTexto.isEmpty() || nombreTexto.isEmpty()) {
+            if (nombreTexto.isEmpty() || correoTexto.isEmpty() || contrasenaTexto.isEmpty()) {
                 mostrarToast("Completa todos los campos requeridos")
+                return@setOnClickListener
+            }
+
+            // Validación adicional para otros campos
+            if (fechaTexto.isEmpty() || identificacionTexto.isEmpty() || apoyoTexto.isEmpty()) {
+                mostrarToast("Por favor, completa todos los campos")
                 return@setOnClickListener
             }
 

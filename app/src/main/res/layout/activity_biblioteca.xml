@@ -9,21 +9,51 @@
 
     tools:context=".biblioteca">
 
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="270dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200dp"
+        android:fontFamily="@font/old_italic"
+        android:text="@string/mensaje_bienestar"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.574"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <Button
         android:id="@+id/button5"
         android:layout_width="wrap_content"
         android:layout_height="48dp"
         android:layout_marginTop="40dp"
         android:backgroundTint="#BED3E4"
+        android:fontFamily="@font/old_italic"
         android:paddingStart="24dp"
         android:paddingEnd="24dp"
         android:text="@string/btn_videos_autoayuda"
         android:textAllCaps="false"
         android:textColor="#000000"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.524"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginTop="36dp"
+        android:backgroundTint="#BED3E4"
+        android:fontFamily="@font/old_italic"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:text="@string/btn_reflexiones"
+        android:textAllCaps="false"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.479"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button5" />
 
     <Button
         android:id="@+id/button7"
@@ -31,68 +61,28 @@
         android:layout_height="48dp"
         android:layout_marginTop="36dp"
         android:backgroundTint="#BED3E4"
+        android:fontFamily="@font/old_italic"
         android:paddingStart="24dp"
         android:paddingEnd="24dp"
         android:text="@string/btn_frases_motivacionales"
         android:textAllCaps="false"
         android:textColor="#000000"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.511"
+        app:layout_constraintHorizontal_bias="0.484"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button6" />
-
-    <Button
-        android:id="@+id/button8"
-        android:layout_width="wrap_content"
-        android:layout_height="48dp"
-        android:layout_marginTop="24dp"
-        android:backgroundTint="#BED3E4"
-        android:paddingStart="24dp"
-        android:paddingEnd="24dp"
-        android:text="@string/btn_playlist"
-        android:textAllCaps="false"
-        android:textColor="#000000"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button7" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="88dp"
+        android:layout_marginTop="140dp"
+        android:fontFamily="@font/old_italic"
         android:text="@string/biblioteca"
+        android:textSize="23sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.525"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="270dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="148dp"
-        android:text="@string/mensaje_bienestar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.617"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/button6"
-        android:layout_width="wrap_content"
-        android:layout_height="48dp"
-        android:layout_marginTop="32dp"
-        android:backgroundTint="#BED3E4"
-        android:paddingStart="24dp"
-        android:paddingEnd="24dp"
-        android:text="@string/btn_reflexiones"
-        android:textAllCaps="false"
-        android:textColor="#000000"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button5" />
 
     <ImageButton
         android:id="@+id/imageButton"

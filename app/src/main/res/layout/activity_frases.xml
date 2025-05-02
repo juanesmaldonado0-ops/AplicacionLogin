@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/frase"
+    android:background="@drawable/azul"
     tools:context=".frases">
 
     <RadioButton
@@ -36,19 +36,23 @@
         android:id="@+id/textView16"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="136dp"
         android:text="@string/titulo_recuerda"
-        app:layout_constraintTop_toTopOf="parent"
+        android:fontFamily="@font/old_italic"
+        android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="200dp"
-        android:layout_marginStart="172dp" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView17"
-        android:layout_width="352dp"
-        android:layout_height="116dp"
+        android:layout_width="138dp"
+        android:layout_height="306dp"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="252dp"
+        android:fontFamily="@font/old_italic"
         android:text="@string/mensaje_inspirador"
-        app:layout_constraintTop_toTopOf="parent"
+        android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="271dp"
-        android:layout_marginStart="32dp" />
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

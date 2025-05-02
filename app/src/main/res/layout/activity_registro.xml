@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/azul"
+    android:background="@drawable/fondo"
     tools:context=".activity_registro">
 
     <TextView
@@ -14,6 +14,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:text="@string/registrate_con_nosotros"
+        android:fontFamily="@font/old_italic"
         app:layout_constraintBottom_toTopOf="@+id/textView20"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -25,6 +26,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:text="@string/como_te_gustaria_que_te_llamemos"
+        android:fontFamily="@font/old_italic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView19" />
@@ -35,6 +37,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:text="@string/dejanos_tu_correo_para_estar_en_contacto_contigo"
+        android:fontFamily="@font/old_italic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextText" />
@@ -45,6 +48,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:text="@string/elige_una_contrasena_segura"
+        android:fontFamily="@font/old_italic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress2" />
@@ -55,6 +59,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:text="@string/cuando_celebramos_tu_dia_especial"
+        android:fontFamily="@font/old_italic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword2" />
@@ -65,6 +70,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:text="@string/como_te_identificas"
+        android:fontFamily="@font/old_italic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextDate" />
@@ -75,6 +81,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:text="@string/apoyo_deseado"
+        android:fontFamily="@font/old_italic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextMultiLine" />
@@ -83,11 +90,13 @@
         android:id="@+id/button3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="20dp"
         android:backgroundTint="#BED3E4"
+        android:fontFamily="@font/old_italic"
         android:text="@string/boton_listo"
         android:textColor="#0D0D0D"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextMultiLine2" />
 
