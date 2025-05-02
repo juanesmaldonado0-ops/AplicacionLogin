@@ -8,6 +8,11 @@ import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
+<<<<<<< HEAD
+=======
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
+>>>>>>> 6bb22eb472787f9575ce9fba83185f5dcb4fea6c
 
 class MainActivity : AppCompatActivity() {
 
@@ -17,6 +22,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
+<<<<<<< HEAD
         auth = FirebaseAuth.getInstance()
 
         val emailEditText = findViewById<EditText>(R.id.editTextTextEmailAddress)
@@ -53,6 +59,54 @@ class MainActivity : AppCompatActivity() {
         btnRegistro.setOnClickListener {
             val intent = Intent(this, ActivityRegistro::class.java)
             startActivity(intent)
+=======
+        // Inicializar Firebase Auth
+        auth = Firebase.auth
+
+        // Configurar vistas
+        val etEmail = findViewById<EditText>(R.id.editTextTextEmailAddress)
+        val etPassword = findViewById<EditText>(R.id.editTextTextPassword)
+        val btnLogin = findViewById<Button>(R.id.button2)
+        val btnRegister = findViewById<Button>(R.id.button)
+
+        // Botón de Registro
+        btnRegister.setOnClickListener {
+            startActivity(Intent(this, ActivityRegistro::class.java))
+        }
+
+        // Botón de Login
+        btnLogin.setOnClickListener {
+            val email = etEmail.text.toString().trim()
+            val password = etPassword.text.toString().trim()
+
+            if (email.isEmpty() || password.isEmpty()) {
+                Toast.makeText(this, "Ingrese email y contraseña", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
+
+            // Mostrar progreso (opcional)
+            // progressBar.visibility = View.VISIBLE
+
+            // Autenticación con Firebase
+            auth.signInWithEmailAndPassword(email, password)
+                .addOnCompleteListener(this) { task ->
+                    // progressBar.visibility = View.GONE
+
+                    if (task.isSuccessful) {
+                        // Redirigir a la actividad biblioteca
+                        startActivity(Intent(this, biblioteca::class.java))
+                        finish() // Cierra la actividad de login
+                    } else {
+                        val errorMsg = when {
+                            task.exception?.message?.contains("invalid email") == true -> "Formato de email inválido"
+                            task.exception?.message?.contains("wrong password") == true -> "Contraseña incorrecta"
+                            task.exception?.message?.contains("user not found") == true -> "Usuario no registrado"
+                            else -> "Error de autenticación: ${task.exception?.message}"
+                        }
+                        Toast.makeText(this, errorMsg, Toast.LENGTH_LONG).show()
+                    }
+                }
+>>>>>>> 6bb22eb472787f9575ce9fba83185f5dcb4fea6c
         }
     }
 }

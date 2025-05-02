@@ -1,5 +1,5 @@
 plugins {
-    id("com.google.gms.google-services") // Google services plugin para Firebase
+    id("com.google.gms.google-services")
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
 }
@@ -27,38 +27,27 @@ android {
             )
         }
     }
-
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
     }
-
     kotlinOptions {
         jvmTarget = "11"
     }
 }
 
 dependencies {
-    // Firebase BOM para manejar versiones de Firebase
+
     implementation(platform("com.google.firebase:firebase-bom:33.12.0"))
-
-    // Dependencias de Firebase (solo si las usas)
-    implementation("com.google.firebase:firebase-auth")
-    implementation("com.google.firebase:firebase-database")
-
-    // AndroidX Libraries
+    implementation("com.google.firebase:firebase-analytics")
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
-
-    // Testing Libraries
+    implementation(libs.firebase.auth.ktx)
+    implementation(libs.firebase.database.ktx)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
-
-    // Firebase KTX para Kotlin
-    implementation(libs.firebase.auth.ktx)
-    implementation(libs.firebase.database.ktx)
 }

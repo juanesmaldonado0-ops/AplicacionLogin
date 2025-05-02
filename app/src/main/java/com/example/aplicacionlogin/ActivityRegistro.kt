@@ -2,24 +2,29 @@ package com.example.aplicacionlogin
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.auth.UserProfileChangeRequest
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.ktx.Firebase
+import java.util.*
 
 class ActivityRegistro : AppCompatActivity() {
 
     private lateinit var auth: FirebaseAuth
-    private val TAG = "ActivityRegistro" // Para logs
+    private lateinit var db: FirebaseFirestore
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_registro)
 
-        auth = FirebaseAuth.getInstance()
+        // Inicializar Firebase Auth y Firestore
+        auth = Firebase.auth
+        db = FirebaseFirestore.getInstance()
 
         val nombre = findViewById<EditText>(R.id.editTextText)
         val correo = findViewById<EditText>(R.id.editTextTextEmailAddress2)
@@ -37,6 +42,7 @@ class ActivityRegistro : AppCompatActivity() {
             val identificacionTexto = identificacion.text.toString().trim()
             val apoyoTexto = apoyoDeseado.text.toString().trim()
 
+<<<<<<< HEAD
             if (nombreTexto.isEmpty() || correoTexto.isEmpty() || contrasenaTexto.isEmpty()) {
                 mostrarToast("Completa todos los campos requeridos")
                 return@setOnClickListener
@@ -49,52 +55,107 @@ class ActivityRegistro : AppCompatActivity() {
             }
 
             registrarUsuario(nombreTexto, correoTexto, contrasenaTexto, fechaTexto, identificacionTexto, apoyoTexto)
+=======
+            if (correoTexto.isEmpty() || contrasenaTexto.isEmpty() || nombreTexto.isEmpty()) {
+                Toast.makeText(this, "Completa todos los campos requeridos", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
+
+            registrarUsuarioFirestore(nombreTexto, correoTexto, contrasenaTexto, fechaTexto, identificacionTexto, apoyoTexto)
+>>>>>>> 6bb22eb472787f9575ce9fba83185f5dcb4fea6c
         }
     }
 
-    private fun registrarUsuario(nombre: String, correo: String, contrasena: String,
-                                 fecha: String, identificacion: String, apoyo: String) {
+    private fun registrarUsuarioFirestore(
+        nombre: String,
+        correo: String,
+        contrasena: String,
+        fechaNacimiento: String,
+        identificacion: String,
+        apoyoDeseado: String
+    ) {
         auth.createUserWithEmailAndPassword(correo, contrasena)
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
-                    Log.d(TAG, "createUserWithEmail:success")
-                    guardarDatosUsuario(auth.currentUser?.uid, nombre, correo, fecha, identificacion, apoyo)
+                    val user = auth.currentUser
+
+                    // Actualizar perfil con nombre
+                    val profileUpdates = UserProfileChangeRequest.Builder()
+                        .setDisplayName(nombre)
+                        .build()
+
+                    user?.updateProfile(profileUpdates)
+                        ?.addOnCompleteListener { profileTask ->
+                            if (profileTask.isSuccessful) {
+                                // Guardar datos en Firestore
+                                guardarDatosFirestore(
+                                    userId = user.uid,
+                                    nombre = nombre,
+                                    correo = correo,
+                                    fechaNacimiento = fechaNacimiento,
+                                    identificacion = identificacion,
+                                    apoyoDeseado = apoyoDeseado
+                                )
+                            } else {
+                                Toast.makeText(
+                                    this,
+                                    "Error al actualizar perfil: ${profileTask.exception?.message}",
+                                    Toast.LENGTH_SHORT
+                                ).show()
+                            }
+                        }
                 } else {
-                    Log.w(TAG, "createUserWithEmail:failure", task.exception)
-                    mostrarToast("Error en registro: ${task.exception?.message}")
+                    Toast.makeText(
+                        this,
+                        "Error en registro: ${task.exception?.message}",
+                        Toast.LENGTH_SHORT
+                    ).show()
                 }
             }
     }
 
-    private fun guardarDatosUsuario(userId: String?, nombre: String, correo: String,
-                                    fecha: String, identificacion: String, apoyo: String) {
-        if (userId == null) {
-            mostrarToast("Error: ID de usuario no generado")
-            return
-        }
-
-        val userMap = hashMapOf(
+    private fun guardarDatosFirestore(
+        userId: String,
+        nombre: String,
+        correo: String,
+        fechaNacimiento: String,
+        identificacion: String,
+        apoyoDeseado: String
+    ) {
+        val userData = hashMapOf(
             "nombre" to nombre,
             "correo" to correo,
-            "fechaNacimiento" to fecha,
+            "fechaNacimiento" to fechaNacimiento,
             "identificacion" to identificacion,
-            "apoyoDeseado" to apoyo
+            "apoyoDeseado" to apoyoDeseado,
+            "fechaRegistro" to Calendar.getInstance().time,
+            "diario" to hashMapOf(
+                "entradas_count" to 0
+            )
         )
 
-        FirebaseDatabase.getInstance().getReference("usuarios")
-            .child(userId)
-            .setValue(userMap)
+        db.collection("usuarios")
+            .document(userId)
+            .set(userData)
             .addOnSuccessListener {
-                Log.d(TAG, "Datos de usuario guardados correctamente")
-                mostrarToast("Registro exitoso")
-                redirigirABienvenida()
+                Toast.makeText(this, "Registro exitoso", Toast.LENGTH_SHORT).show()
+                val intent = Intent(this, MainActivity::class.java).apply {
+                    flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
+                }
+                startActivity(intent)
+                finish()
             }
             .addOnFailureListener { e ->
-                Log.e(TAG, "Error al guardar datos", e)
-                mostrarToast("Error al guardar datos: ${e.message}")
+                Toast.makeText(
+                    this,
+                    "Error al guardar datos: ${e.message}",
+                    Toast.LENGTH_SHORT
+                ).show()
             }
     }
+}
 
+<<<<<<< HEAD
     private fun redirigirABienvenida() {
         try {
             val intent = Intent(this, bienvenida::class.java).apply {
@@ -113,3 +174,5 @@ class ActivityRegistro : AppCompatActivity() {
         Toast.makeText(this, mensaje, Toast.LENGTH_SHORT).show()
     }
 }
+=======
+>>>>>>> 6bb22eb472787f9575ce9fba83185f5dcb4fea6c
