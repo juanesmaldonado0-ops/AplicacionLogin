@@ -42,27 +42,12 @@ class ActivityRegistro : AppCompatActivity() {
             val identificacionTexto = identificacion.text.toString().trim()
             val apoyoTexto = apoyoDeseado.text.toString().trim()
 
-<<<<<<< HEAD
-            if (nombreTexto.isEmpty() || correoTexto.isEmpty() || contrasenaTexto.isEmpty()) {
-                mostrarToast("Completa todos los campos requeridos")
-                return@setOnClickListener
-            }
-
-            // Validación adicional para otros campos
-            if (fechaTexto.isEmpty() || identificacionTexto.isEmpty() || apoyoTexto.isEmpty()) {
-                mostrarToast("Por favor, completa todos los campos")
-                return@setOnClickListener
-            }
-
-            registrarUsuario(nombreTexto, correoTexto, contrasenaTexto, fechaTexto, identificacionTexto, apoyoTexto)
-=======
             if (correoTexto.isEmpty() || contrasenaTexto.isEmpty() || nombreTexto.isEmpty()) {
                 Toast.makeText(this, "Completa todos los campos requeridos", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
 
             registrarUsuarioFirestore(nombreTexto, correoTexto, contrasenaTexto, fechaTexto, identificacionTexto, apoyoTexto)
->>>>>>> 6bb22eb472787f9575ce9fba83185f5dcb4fea6c
         }
     }
 
@@ -155,24 +140,3 @@ class ActivityRegistro : AppCompatActivity() {
     }
 }
 
-<<<<<<< HEAD
-    private fun redirigirABienvenida() {
-        try {
-            val intent = Intent(this, bienvenida::class.java).apply {
-                flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
-            }
-            startActivity(intent)
-            finish()
-            Log.d(TAG, "Redirección a bienvenida iniciada")
-        } catch (e: Exception) {
-            Log.e(TAG, "Error al redirigir a bienvenida", e)
-            mostrarToast("Error al abrir la pantalla de bienvenida")
-        }
-    }
-
-    private fun mostrarToast(mensaje: String) {
-        Toast.makeText(this, mensaje, Toast.LENGTH_SHORT).show()
-    }
-}
-=======
->>>>>>> 6bb22eb472787f9575ce9fba83185f5dcb4fea6c

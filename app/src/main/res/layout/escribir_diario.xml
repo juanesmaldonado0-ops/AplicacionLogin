@@ -24,7 +24,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:hint="mm/dd/yyyy"
-        android:inputType="date"
+        android:inputType="none"
+        android:focusable="false"
         android:layout_marginTop="8dp"/>
 
     <LinearLayout
