@@ -2,7 +2,6 @@ package com.example.aplicacionlogin
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
@@ -13,13 +12,11 @@ import com.google.firebase.database.FirebaseDatabase
 class ActivityRegistro : AppCompatActivity() {
 
     private lateinit var auth: FirebaseAuth
-    private val TAG = "ActivityRegistro" // Para logs
+    private val TAG = "ActivityRegistro"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_registro)
-
-        auth = FirebaseAuth.getInstance()
 
         val nombre = findViewById<EditText>(R.id.editTextText)
         val correo = findViewById<EditText>(R.id.editTextTextEmailAddress2)
@@ -38,72 +35,44 @@ class ActivityRegistro : AppCompatActivity() {
             val apoyoTexto = apoyoDeseado.text.toString().trim()
 
             if (correoTexto.isEmpty() || contrasenaTexto.isEmpty() || nombreTexto.isEmpty()) {
-                mostrarToast("Completa todos los campos requeridos")
+                Toast.makeText(this, "Completa todos los campos requeridos", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
 
-            registrarUsuario(nombreTexto, correoTexto, contrasenaTexto, fechaTexto, identificacionTexto, apoyoTexto)
-        }
-    }
+            auth.createUserWithEmailAndPassword(correoTexto, contrasenaTexto)
+                .addOnCompleteListener(this) { task ->
+                    if (task.isSuccessful) {
+                        val userId = auth.currentUser?.uid ?: return@addOnCompleteListener
 
-    private fun registrarUsuario(nombre: String, correo: String, contrasena: String,
-                                 fecha: String, identificacion: String, apoyo: String) {
-        auth.createUserWithEmailAndPassword(correo, contrasena)
-            .addOnCompleteListener(this) { task ->
-                if (task.isSuccessful) {
-                    Log.d(TAG, "createUserWithEmail:success")
-                    guardarDatosUsuario(auth.currentUser?.uid, nombre, correo, fecha, identificacion, apoyo)
-                } else {
-                    Log.w(TAG, "createUserWithEmail:failure", task.exception)
-                    mostrarToast("Error en registro: ${task.exception?.message}")
+                        val userMap = hashMapOf(
+                            "nombre" to nombreTexto,
+                            "correo" to correoTexto,
+                            "fechaNacimiento" to fechaTexto,
+                            "identificacion" to identificacionTexto,
+                            "apoyoDeseado" to apoyoTexto
+                        )
+
+                        FirebaseDatabase.getInstance().getReference("usuarios")
+                            .child(userId)
+                            .setValue(userMap)
+                            .addOnSuccessListener {
+                                // Redirección explícita a MainActivity
+                                val intent = Intent(this, MainActivity::class.java)
+                                intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
+                                startActivity(intent)
+                                finish()
+                            }
+                            .addOnFailureListener { e ->
+                                Toast.makeText(this,
+                                    "Error al guardar datos: ${e.message}",
+                                    Toast.LENGTH_SHORT).show()
+                            }
+                    } else {
+                        Toast.makeText(this,
+                            "Error en registro: ${task.exception?.message}",
+                            Toast.LENGTH_SHORT).show()
+                    }
                 }
-            }
-    }
-
-    private fun guardarDatosUsuario(userId: String?, nombre: String, correo: String,
-                                    fecha: String, identificacion: String, apoyo: String) {
-        if (userId == null) {
-            mostrarToast("Error: ID de usuario no generado")
-            return
         }
-
-        val userMap = hashMapOf(
-            "nombre" to nombre,
-            "correo" to correo,
-            "fechaNacimiento" to fecha,
-            "identificacion" to identificacion,
-            "apoyoDeseado" to apoyo
-        )
-
-        FirebaseDatabase.getInstance().getReference("usuarios")
-            .child(userId)
-            .setValue(userMap)
-            .addOnSuccessListener {
-                Log.d(TAG, "Datos de usuario guardados correctamente")
-                mostrarToast("Registro exitoso")
-                redirigirABienvenida()
-            }
-            .addOnFailureListener { e ->
-                Log.e(TAG, "Error al guardar datos", e)
-                mostrarToast("Error al guardar datos: ${e.message}")
-            }
-    }
-
-    private fun redirigirABienvenida() {
-        try {
-            val intent = Intent(this, bienvenida::class.java).apply {
-                flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
-            }
-            startActivity(intent)
-            finish()
-            Log.d(TAG, "Redirección a bienvenida iniciada")
-        } catch (e: Exception) {
-            Log.e(TAG, "Error al redirigir a bienvenida", e)
-            mostrarToast("Error al abrir la pantalla de bienvenida")
-        }
-    }
-
-    private fun mostrarToast(mensaje: String) {
-        Toast.makeText(this, mensaje, Toast.LENGTH_SHORT).show()
     }
 }
