@@ -5,12 +5,10 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-<<<<<<< HEAD
+
     android:background="@drawable/azul"
-=======
-    android:background="@drawable/frases_fondo"
->>>>>>> 6bb22eb472787f9575ce9fba83185f5dcb4fea6c
-    tools:context=".frases">
+
+
 
     <RadioButton
         android:id="@+id/radioButton2"
