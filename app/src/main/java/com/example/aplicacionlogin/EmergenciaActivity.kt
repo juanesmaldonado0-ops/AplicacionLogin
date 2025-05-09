@@ -1,8 +1,7 @@
-
 package com.example.aplicacionlogin
 
-import android.os.Bundle
 import android.content.Intent
+import android.os.Bundle
 import android.widget.Button
 import android.widget.Toast
 import com.google.android.material.textfield.TextInputEditText
@@ -20,22 +19,24 @@ class EmergenciaActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.modo_emergencia)
 
-
+        // Inicializar Firebase
         auth = FirebaseAuth.getInstance()
         db = FirebaseFirestore.getInstance()
 
+        // Referencias a los elementos de la vista
         val textInput = findViewById<TextInputEditText>(R.id.textInputEditText)
         val confirmarBtn = findViewById<Button>(R.id.button15)
+        val historialBtn = findViewById<Button>(R.id.button16)
+        val ayudaUrgenteBtn = findViewById<Button>(R.id.button14) // Botón de ayuda urgente
 
+        // Acción del botón "CONFIRMAR"
         confirmarBtn.setOnClickListener {
             val mensaje = textInput.text.toString().trim()
-
 
             if (mensaje.isEmpty()) {
                 Toast.makeText(this, "Por favor, describe el problema", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
-
 
             val userId = auth.currentUser?.uid
             if (userId == null) {
@@ -43,22 +44,18 @@ class EmergenciaActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
 
-
             val notaEmergencia = hashMapOf(
                 "mensaje" to mensaje,
                 "timestamp" to Calendar.getInstance().time
             )
 
-
-            confirmarBtn.isEnabled = true
-
+            confirmarBtn.isEnabled = false
 
             db.collection("usuarios")
                 .document(userId)
                 .collection("emergencias")
                 .add(notaEmergencia)
                 .addOnSuccessListener {
-
                     Toast.makeText(this, "Mensaje de emergencia enviado", Toast.LENGTH_SHORT).show()
                     textInput.text?.clear()
                     val intent = Intent(this, LlamarActivity::class.java)
@@ -66,10 +63,25 @@ class EmergenciaActivity : AppCompatActivity() {
                     finish()
                 }
                 .addOnFailureListener { e ->
-
                     Toast.makeText(this, "Error: ${e.message}", Toast.LENGTH_SHORT).show()
-                    confirmarBtn.isEnabled = true // Rehabilitar el botón si ocurre un error
+                    confirmarBtn.isEnabled = true
                 }
         }
+
+        // Acción del botón "HISTORIAL"
+        historialBtn.setOnClickListener {
+            val intent = Intent(this, HistorialEmergencia::class.java)
+            startActivity(intent)
+        }
+
+        // Acción del botón "Necesito Ayuda Urgente"
+        ayudaUrgenteBtn.setOnClickListener {
+            val intent = Intent(this, LlamarActivity::class.java)
+            startActivity(intent)
+        }
+    }
+
+    class LlamarActivity {
+
     }
 }
