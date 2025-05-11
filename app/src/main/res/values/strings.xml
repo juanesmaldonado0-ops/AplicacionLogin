@@ -82,6 +82,10 @@
     <string name="dificil">Tiempos dificiles</string>
 
     <!-- AFIRMACIONES -->
-    <string name="prueba">PRUEBA</string>
+    <string name="frase">No voy a renunciar a ninguno de mis sueños</string>
+    <string name="añadir">Añadir</string>
+    <string name="categoria">Categoria</string>
+    <string name="close">close</string>
+
 
 </resources>

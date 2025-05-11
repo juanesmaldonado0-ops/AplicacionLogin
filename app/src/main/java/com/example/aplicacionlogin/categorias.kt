@@ -9,14 +9,17 @@ import android.widget.GridLayout
 import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.EditText
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
+import com.google.firebase.firestore.FirebaseFirestore
 
 class categorias : AppCompatActivity() {
 
     private lateinit var gridLayout: GridLayout
     private lateinit var etSearch: EditText
     private lateinit var noResultsTextView: TextView
+    private val db = FirebaseFirestore.getInstance()
     private val allCategories = listOf(
         Category("General", R.string.general),
         Category("Vida y felicidad", R.string.vida),
@@ -67,9 +70,23 @@ class categorias : AppCompatActivity() {
             categories.forEach { category ->
                 val cardView = createCategoryCard(category)
                 cardView.setOnClickListener {
-                    // Redirigir a la actividad Afirmaciones al hacer clic en cualquier categoría
-                    val intent = Intent(this, Afirmaciones::class.java)
-                    startActivity(intent)
+                    // Verificar si la categoría es "Tus favoritos"
+                    if (category.name == "Tus favoritos") {
+                        verificarFavoritos { hasFrases ->
+                            if (hasFrases) {
+                                val intent = Intent(this, Afirmaciones::class.java)
+                                intent.putExtra("categoria", category.name)  // Pasamos el nombre de la categoría
+                                startActivity(intent)
+                            } else {
+                                Toast.makeText(this, "No hay frases guardadas en 'Tus favoritos'.", Toast.LENGTH_SHORT).show()
+                            }
+                        }
+                    } else {
+                        // Redirigir a la actividad Afirmaciones si no es "Tus favoritos"
+                        val intent = Intent(this, Afirmaciones::class.java)
+                        intent.putExtra("categoria", category.name)  // Pasamos el nombre de la categoría
+                        startActivity(intent)
+                    }
                 }
                 gridLayout.addView(cardView)
             }
@@ -113,6 +130,21 @@ class categorias : AppCompatActivity() {
 
     private fun Int.dpToPx(context: android.content.Context): Int {
         return (this * context.resources.displayMetrics.density).toInt()
+    }
+
+    private fun verificarFavoritos(callback: (Boolean) -> Unit) {
+        db.collection("frases")
+            .document("Tus favoritos")
+            .collection("lista")
+            .get()
+            .addOnSuccessListener { result ->
+                // Verifica si hay documentos en la subcolección "lista"
+                callback(result.documents.isNotEmpty())
+            }
+            .addOnFailureListener {
+                Toast.makeText(this, "Error al verificar favoritos", Toast.LENGTH_SHORT).show()
+                callback(false)
+            }
     }
 
     data class Category(val name: String, val nameResId: Int)

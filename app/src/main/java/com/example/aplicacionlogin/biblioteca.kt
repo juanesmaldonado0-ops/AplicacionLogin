@@ -44,17 +44,16 @@ class biblioteca : AppCompatActivity() {
             startActivity(intent)
         }
 
-        // Agregar listener para el ImageButton que redirige a la actividad de categorías
-        val btnCategorias = findViewById<ImageButton>(R.id.imageButton4) // ID del botón en el layout XML
-        btnCategorias.setOnClickListener {
-            // Intent para redirigir a la actividad categorias
-            val intent = Intent(this, categorias::class.java) // nombre de la actividad de categorías
-            startActivity(intent) // Iniciar la actividad categorias
-        }
-
         val btnEmergencia = findViewById<ImageButton>(R.id.imageButton3)
         btnEmergencia.setOnClickListener {
             val intent = Intent(this, EmergenciaActivity::class.java)
+            startActivity(intent)
+        }
+
+        // Nuevo botón para redirigir a Afirmaciones
+        val btnNoticias = findViewById<ImageButton>(R.id.imageButton4)
+        btnNoticias.setOnClickListener {
+            val intent = Intent(this, Afirmaciones::class.java)
             startActivity(intent)
         }
 

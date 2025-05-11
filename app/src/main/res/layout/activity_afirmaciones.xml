@@ -7,11 +7,107 @@
     android:layout_height="match_parent"
     tools:context=".Afirmaciones">
 
+    <!-- Botón de cerrar (X) con fondo oscuro y sombra más visible -->
+    <ImageButton
+        android:id="@+id/btnCerrar"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/cerrar"
+        android:contentDescription="@string/close"
+        android:backgroundTint="#000000"
+    android:layout_marginTop="15dp"
+    android:layout_marginStart="10dp"
+    android:layout_alignParentTop="true"
+    android:layout_alignParentStart="true"
+    android:shadowColor="#FF000000"
+    android:shadowDx="2"
+    android:shadowDy="2"
+    android:shadowRadius="6" />
+
+
+    <!-- Imagen de fondo opaca -->
+    <ImageView
+        android:id="@+id/fondoPlaya"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/playa"
+        android:alpha="0.7"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Frase principal -->
     <TextView
-        android:id="@+id/textView32"
+        android:id="@+id/tvFrase"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/prueba"
-        tools:layout_editor_absoluteX="170dp"
-        tools:layout_editor_absoluteY="268dp" />
+        android:text="@string/frase"
+        android:textSize="40sp"
+        android:textColor="#000000"
+        android:shadowColor="#80000000"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="6"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:fontFamily="@font/old_italic"
+        android:lineSpacingExtra="8dp"
+        android:padding="24dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Botón de favoritos con icono de corazón -->
+    <Button
+        android:id="@+id/favButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/añadir"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        android:textColor="#000000"
+        android:backgroundTint="#FFFFFF"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        android:fontFamily="@font/old_italic"
+        app:cornerRadius="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btnCategoria"
+        android:layout_marginBottom="32dp"
+        android:layout_marginEnd="16dp"
+        android:drawableLeft="@drawable/corazon"
+        android:drawablePadding="8dp"
+        android:gravity="center_vertical|center_horizontal" />
+
+    <!-- Botón General con icono de opciones -->
+    <Button
+        android:id="@+id/btnCategoria"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/categoria"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        android:textColor="#000000"
+        android:backgroundTint="#FFFFFF"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        android:fontFamily="@font/old_italic"
+        app:cornerRadius="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/favButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="32dp"
+        android:layout_marginStart="16dp"
+        android:drawableLeft="@drawable/opciones"
+        android:drawablePadding="8dp"
+        android:gravity="center_vertical|center_horizontal" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
