@@ -43,9 +43,17 @@ class biblioteca : AppCompatActivity() {
             val intent = Intent(this, DiarioActivity::class.java)
             startActivity(intent)
         }
+
         val btnEmergencia = findViewById<ImageButton>(R.id.imageButton3)
         btnEmergencia.setOnClickListener {
             val intent = Intent(this, EmergenciaActivity::class.java)
+            startActivity(intent)
+        }
+
+        // Nuevo botón para redirigir a Afirmaciones
+        val btnNoticias = findViewById<ImageButton>(R.id.imageButton4)
+        btnNoticias.setOnClickListener {
+            val intent = Intent(this, Afirmaciones::class.java)
             startActivity(intent)
         }
 

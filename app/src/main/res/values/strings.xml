@@ -69,4 +69,23 @@
     <string name="salir2">X</string>
     <string name="mensaje_inspirador">Aunque a veces dudes de ti mismo, quiero recordarte algo: eres valioso, fuerte y único. Cada paso que das, por pequeño que sea, es una muestra de tu valentía. No necesitas ser perfecto para ser increíble. Solo necesitas seguir adelante.</string>
 
+    <!-- AFIRMACIONES CATEGORIAS-->
+    <string name="cancel">CANCELAR</string>
+    <string name="pregunta">¿En que quieres enfocarte?</string>
+    <string name="general">General</string>
+    <string name="vida">Vida y felicidad</string>
+    <string name="favoritos">Tus favoritos</string>
+    <string name="amor_propio">Amor propio</string>
+    <string name="positividad">Positividad corporal</string>
+    <string name="crecimiento">Crecimiento personal</string>
+    <string name="agradecimiento">Agradecimiento</string>
+    <string name="dificil">Tiempos dificiles</string>
+
+    <!-- AFIRMACIONES -->
+    <string name="frase">No voy a renunciar a ninguno de mis sueños</string>
+    <string name="añadir">Añadir</string>
+    <string name="categoria">Categoria</string>
+    <string name="close">close</string>
+
+
 </resources>

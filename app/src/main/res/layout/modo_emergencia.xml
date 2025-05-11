@@ -36,8 +36,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="26dp"
+        android:layout_marginBottom="39dp"
         android:backgroundTint="#D6E0E7"
         android:fontFamily="@font/old_italic"
         android:text="CONFIRMAR"
@@ -59,5 +58,20 @@
         android:fontFamily="@font/old_italic"
         android:hint="Intenta describir el problema brevemente para ayudarte de la manera mas rapida posible..."
         android:visibility="visible" />
+
+    <Button
+        android:id="@+id/button16"
+        android:layout_width="153dp"
+        android:layout_height="37dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="56dp"
+        android:backgroundTint="#D6E0E7"
+        android:layout_marginEnd="32dp"
+        android:textColor="#000"
+        android:fontFamily="@font/old_italic"
+        android:layout_marginBottom="89dp"
+        android:layout_toEndOf="@+id/button15"
+        android:text="HISTORIAL" />
 
 </RelativeLayout>
