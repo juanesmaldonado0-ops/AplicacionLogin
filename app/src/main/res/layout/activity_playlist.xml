@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondodos">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Título de la playlist -->
+        <TextView
+            android:id="@+id/titleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/playlist"
+            android:fontFamily="@font/old_italic"
+            android:textStyle="bold"
+            android:textSize="30sp"
+            android:textColor="#000000"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="32dp" />
+
+        <!-- Canción 1 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+            <TextView
+                android:id="@+id/songName1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/Querida_yo"
+                android:fontFamily="@font/old_italic"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:textSize="18sp" />
+            <Button
+                android:id="@+id/playButton1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/reproducir"
+                android:textColor="#000000"
+                android:backgroundTint="#D0DFF0" />
+        </LinearLayout>
+
+        <!-- Canción 2 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+            <TextView
+                android:id="@+id/songName2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/Igual_no_debo"
+                android:fontFamily="@font/old_italic"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:textSize="18sp" />
+            <Button
+                android:id="@+id/playButton2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/reproducir"
+                android:textColor="#000000"
+                android:backgroundTint="#D0DFF0" />
+        </LinearLayout>
+
+        <!-- Canción 3 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+            <TextView
+                android:id="@+id/songName3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Color Esperanza"
+                android:fontFamily="@font/old_italic"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:textSize="18sp" />
+            <Button
+                android:id="@+id/playButton3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/reproducir"
+                android:textColor="#000000"
+                android:backgroundTint="#D0DFF0" />
+        </LinearLayout>
+
+        <!-- Canción 4 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+            <TextView
+                android:id="@+id/songName4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="El Valor de Seguir Adelante"
+                android:fontFamily="@font/old_italic"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:textSize="18sp" />
+            <Button
+                android:id="@+id/playButton4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/reproducir"
+                android:textColor="#000000"
+                android:backgroundTint="#D0DFF0" />
+        </LinearLayout>
+
+        <!-- Canción 5 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+            <TextView
+                android:id="@+id/songName5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/Vivir_mi_vida"
+                android:fontFamily="@font/old_italic"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:textSize="18sp" />
+            <Button
+                android:id="@+id/playButton5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/reproducir"
+                android:textColor="#000000"
+                android:backgroundTint="#D0DFF0" />
+        </LinearLayout>
+
+        <!-- Canción 6 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+            <TextView
+                android:id="@+id/songName6"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/nica"
+                android:fontFamily="@font/old_italic"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:textSize="18sp" />
+            <Button
+                android:id="@+id/playButton6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/reproducir"
+                android:textColor="#000000"
+                android:backgroundTint="#D0DFF0" />
+        </LinearLayout>
+
+        <!-- Canción 7 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+            <TextView
+                android:id="@+id/songName7"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/celebra_la_vida"
+                android:fontFamily="@font/old_italic"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:textSize="18sp" />
+            <Button
+                android:id="@+id/playButton7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/reproducir"
+                android:textColor="#000000"
+                android:backgroundTint="#D0DFF0" />
+        </LinearLayout>
+
+        <!-- Canción 8 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+            <TextView
+                android:id="@+id/songName8"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/la_vida_es_un_carnaval"
+                android:fontFamily="@font/old_italic"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:textSize="18sp" />
+            <Button
+                android:id="@+id/playButton8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/reproducir"
+                android:textColor="#000000"
+                android:backgroundTint="#D0DFF0" />
+        </LinearLayout>
+
+        <!-- Canción 9 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+            <TextView
+                android:id="@+id/songName9"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/creo_en_mi"
+                android:fontFamily="@font/old_italic"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:textSize="18sp" />
+            <Button
+                android:id="@+id/playButton9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/reproducir"
+                android:textColor="#000000"
+                android:backgroundTint="#D0DFF0" />
+        </LinearLayout>
+
+        <!-- Canción 10 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+            <TextView
+                android:id="@+id/songName10"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/mejor_que_ayer"
+                android:fontFamily="@font/old_italic"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:textSize="18sp" />
+            <Button
+                android:id="@+id/playButton10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/reproducir"
+                android:textColor="#000000"
+                android:backgroundTint="#D0DFF0" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

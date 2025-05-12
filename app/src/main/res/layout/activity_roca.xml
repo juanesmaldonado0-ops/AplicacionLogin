@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/rocados"
+    tools:context=".roca">
+
+    <!-- Aquí pones tu icono de flecha -->
+
+    <RadioButton
+        android:id="@+id/radioButton6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:button="@drawable/sig"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="4dp" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="36dp"
+        android:fontFamily="@font/old_italic"
+        android:text="@string/la_roca_en_el_camino"
+        android:textColor="#0F2076"
+        android:textSize="26sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="324dp"
+        android:layout_height="107dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="112dp"
+        android:layout_marginEnd="25dp"
+        android:fontFamily="@font/old_italic"
+        android:text="@string/en_un_reino_lejano_hubo_una_vez_un_rey_que_coloc_una_gran_roca_en_medio_del_camino_principal_de_entrada_al_reino_obstaculizando_el_paso_luego_se_escondi_para_ver_si_alguien_la_retiraba"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="350dp"
+        android:layout_height="145dp"
+        android:layout_marginTop="232dp"
+        android:fontFamily="@font/old_italic"
+        android:gravity="right"
+        android:text="@string/los_comerciantes_m_s_adinerados_del_reino_y_algunos_cortesanos_que_pasaron_simplemente_rodearon_la_roca_muchos_de_ellos_se_quedaron_un_rato_delante_de_la_roca_quej_ndose_y_culparon_al_rey_de_no_mantener_los_caminos_despejados_pero_ninguno_hizo_nada_para_retirar_el_obst_culo"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.59"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="DuplicateIds,MissingConstraints,RtlHardcoded" />
+
+    <TextView
+        android:id="@+id/textView34"
+        android:layout_width="283dp"
+        android:layout_height="319dp"
+        android:layout_marginStart="149dp"
+        android:layout_marginTop="396dp"
+        android:layout_marginEnd="125dp"
+        android:fontFamily="@font/old_italic"
+        android:gravity="center|left"
+        android:text="@string/entonces_lleg_un_campesino_que_llevaba_una_carga_de_verduras_la_dej_en_el_suelo_y_estudi_la_roca_en_el_camino_observ_ndola_intent_mover_la_roca_empuj_ndola_y_haciendo_palanca_con_una_rama_de_madera_que_encontr_a_un_lado_del_camino_despu_s_de_empujar_y_fatigarse_mucho_finalmente_logr_apartar_la_roca_mientras_recog_a_su_carga_encontr_una_bolsa_justo_en_el_lugar_donde_hab_a_estado_la_roca_la_bolsa_conten_a_una_buena_cantidad_de_monedas_de_oro_y_una_nota_del_rey_indicando_que_esa_era_la_recompensa_para_quien_despejara_el_camino"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.91"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints,RtlHardcoded" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

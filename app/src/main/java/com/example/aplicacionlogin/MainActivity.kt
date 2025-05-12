@@ -52,7 +52,7 @@ class MainActivity : AppCompatActivity() {
 
                     if (task.isSuccessful) {
                         // Redirigir a la actividad biblioteca
-                        startActivity(Intent(this, biblioteca::class.java))
+                        startActivity(Intent(this, BibliotecaActivity::class.java))
                         finish() // Cierra la actividad de login
                     } else {
                         val errorMsg = when {

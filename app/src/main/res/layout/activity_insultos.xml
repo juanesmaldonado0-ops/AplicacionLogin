@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/insultos"
+    tools:context=".vaso">
+
+    <RadioButton
+        android:id="@+id/radioButton7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:button="@drawable/sig"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="4dp" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="104dp"
+        android:fontFamily="@font/old_italic"
+        android:text="@string/el_coleccionista_de_insultos"
+        android:textColor="#0F2076"
+        android:textSize="26sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="297dp"
+        android:layout_height="490dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="156dp"
+        android:layout_marginEnd="25dp"
+        android:fontFamily="@font/old_italic"
+        android:text="@string/cerca_de_tokio_viv_a_un_gran_samurai_ya_anciano_que_se_dedicaba_a_ense_ar_el_budismo_zen_a_los_j_venes_a_pesar_de_su_edad_corr_a_la_leyenda_de_que_era_capaz_de_vencer_a_cualquier_adversario_cierto_d_a_un_guerrero_conocido_por_su_total_falta_de_escr_pulos_pas_por_la_casa_del_viejo_era_famoso_por_utilizar_la_t_cnica_de_la_provocaci_n_esperaba_que_el_adversario_hiciera_su_primer_movimiento_y_gracias_a_su_inteligencia_privilegiada_para_captar_los_errores_contraatacaba_con_velocidad_fulminante_el_joven_e_impaciente_guerrero_jam_s_hab_a_perdido_una_batalla_conociendo_la_reputaci_n_del_viejo_samurai_estaba_all_para_derrotarlo_y_aumentar_a_n_m_s_su_fama"
+        android:textSize="19sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.261"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

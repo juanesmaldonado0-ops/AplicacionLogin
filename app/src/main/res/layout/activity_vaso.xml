@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/fondo"
+    android:background="@drawable/vaso"
     tools:context=".vaso">
 
     <RadioButton
@@ -36,19 +36,54 @@
         android:id="@+id/textView12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="36dp"
+        android:fontFamily="@font/old_italic"
         android:text="@string/texto_peso_vaso_agua"
-        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="#0F2076"
+        android:textSize="26sp"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="107dp"
-        android:layout_marginStart="117dp" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView13"
-        android:layout_width="297dp"
-        android:layout_height="482dp"
-        android:text="@string/cuento_psicologico"
-        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="384dp"
+        android:layout_height="148dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="100dp"
+        android:fontFamily="@font/old_italic"
+        android:text="@string/un_psic_logo_estaba_desarrollando_una_sesi_n_grupal_cuando_de_repente_levant_un_vaso_de_agua_todos_esperaban_la_t_pica_pregunta_est_medio_lleno_o_medio_vac_o_sin_embargo_pregunt_cu_nto_pesa_este_vaso_las_respuestas_variaron_entre_200_y_250_gramos_el_psic_logo_les_respondi"
+        android:textSize="19sp"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="159dp"
-        android:layout_marginStart="57dp" />
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="377dp"
+        android:layout_height="134dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="268dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/old_italic"
+        android:text="@string/el_peso_no_es_importante_depende_de_cu_nto_tiempo_lo_sostengo_si_lo_sostengo_un_minuto_no_representar_un_problema_pero_si_lo_sostengo_durante_una_hora_me_doler_el_brazo_el_peso_del_vaso_no_ha_cambiado_siempre_es_el_mismo_pero_cuanto_m_s_tiempo_lo_sujeto_m_s_pesado_y_m_s_dif_cil_de_soportar_se_vuelve"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/textView34"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="DuplicateIds,MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textView34"
+        android:layout_width="160dp"
+        android:layout_height="302dp"
+        android:layout_marginStart="136dp"
+        android:layout_marginTop="412dp"
+        android:fontFamily="@font/old_italic"
+        android:gravity="center"
+        android:text="@string/las_preocupaciones_los_pensamientos_negativos_los_rencores_y_el_resentimiento_son_como_ese_vaso_de_agua_si_pensamos_en_ellos_un_rato_no_pasa_nada_si_pensamos_en_ellos_todo_el_d_a_empiezan_a_doler_por_eso_debemos_aprender_a_dejar_ir_todo_aquello_que_puede_da_arnos"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
 </androidx.constraintlayout.widget.ConstraintLayout>

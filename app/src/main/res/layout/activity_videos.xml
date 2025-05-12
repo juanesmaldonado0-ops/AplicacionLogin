@@ -1,53 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/fondo"
+    android:background="@drawable/fondodos"
     tools:context=".videos">
 
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="84dp"
-        android:text="@string/titulo_videos_autoayuda"
-        android:textColor="#000"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <!-- Primer MaterialCardView -->
 
+    <!-- Título de los videos -->
     <TextView
         android:id="@+id/textView9"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="24dp"
-        android:layout_marginTop="52dp"
-        android:text="@string/mensaje_videos_autoayuda"
-        android:textAlignment="center"
-        android:textColor="#000"
-        android:textSize="16sp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="386dp"
+        android:text="@string/salir4"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textView6" />
-
-    <VideoView
-        android:id="@+id/videoView"
-        android:layout_width="280dp"
-        android:layout_height="223dp"
-        android:layout_margin="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textView9"
-        app:layout_constraintVertical_bias="0.182" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <RadioButton
         android:id="@+id/radioButton"
@@ -60,16 +35,201 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardVideo1"
+        android:layout_width="330dp"
+        android:layout_height="60dp"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="312dp"
+        android:clickable="true"
+        android:focusable="true"
+        app:cardBackgroundColor="#4B5F8E"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+            android:layout_width="310dp"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="16dp">
+
+            <ImageView
+                android:layout_width="54dp"
+                android:layout_height="39dp"
+                android:contentDescription="@string/imagen_relacionada_con_el_concepto_de_liberaci_n"
+                android:src="@drawable/liberar" />
+
+            <TextView
+                android:layout_width="235dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:fontFamily="@font/old_italic"
+                android:text="@string/lib_rate"
+                android:textColor="#000"
+                android:textSize="24sp" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
     <TextView
-        android:id="@+id/textView18"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="18dp"
-        android:layout_marginEnd="386dp"
-        android:text="@string/salir"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        android:id="@+id/textView6"
+        android:layout_width="370dp"
+        android:layout_height="88dp"
+        android:layout_marginTop="68dp"
+        android:fontFamily="@font/old_italic"
+        android:gravity="center"
+        android:text="@string/titulo_videos_autoayuda"
+        android:textColor="#000"
+        android:textSize="38sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Segundo MaterialCardView -->
+
+    <!-- Tercer MaterialCardView -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardVideo3"
+        android:layout_width="330dp"
+        android:layout_height="60dp"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="492dp"
+        android:clickable="true"
+        android:focusable="true"
+        app:cardBackgroundColor="#4B5F8E"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.617"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="310dp"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="16dp">
+
+            <ImageView
+                android:layout_width="62dp"
+                android:layout_height="43dp"
+                android:contentDescription="@null"
+                android:src="@drawable/contigo" />
+
+            <TextView
+                android:layout_width="228dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:fontFamily="@font/old_italic"
+                android:text="@string/aqu_estoy_contigo"
+                android:textColor="#000"
+                android:textSize="22sp"
+                tools:ignore="SpeakableTextPresent" />
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Mensaje de los videos -->
+
+    <!-- Cuarto MaterialCardView -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardVideo4"
+        android:layout_width="330dp"
+        android:layout_height="60dp"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="584dp"
+        android:clickable="true"
+        android:focusable="true"
+        app:cardBackgroundColor="#4B5F8E"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="310dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="16dp">
+
+            <ImageView
+                android:layout_width="65dp"
+                android:layout_height="46dp"
+                android:contentDescription="@string/imagen_relacionada_con_el_concepto_de_empezar_de_cero"
+                android:src="@drawable/cero" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:fontFamily="@font/old_italic"
+                android:text="@string/empezar_de_cero_contigo"
+                android:textColor="#000"
+                android:textSize="22sp" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:id="@+id/textView35"
+        android:layout_width="378dp"
+        android:layout_height="105dp"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="188dp"
+        android:fontFamily="@font/old_italic"
+        android:text="@string/mensaje_videos_autoayuda"
+        android:textAlignment="viewEnd"
+        android:textColor="#2F4375"
+        android:textSize="28sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardVideo2"
+        android:layout_width="330dp"
+        android:layout_height="60dp"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="400dp"
+        android:clickable="true"
+        android:focusable="true"
+        app:cardBackgroundColor="#4B5F8E"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+            android:layout_width="310dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="16dp">
+
+            <ImageView
+                android:layout_width="54dp"
+                android:layout_height="48dp"
+                android:contentDescription="@string/imagen_relacionada_con_el_concepto_de_escuchar"
+                android:src="@drawable/escuchar" />
+
+            <TextView
+                android:layout_width="239dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:fontFamily="@font/old_italic"
+                android:text="@string/solo_escuchalo"
+                android:textColor="#000"
+                android:textSize="24sp" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

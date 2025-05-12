@@ -1,5 +1,6 @@
 package com.example.aplicacionlogin
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.widget.RadioButton
@@ -9,6 +10,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
 class frases : AppCompatActivity() {
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -21,13 +23,13 @@ class frases : AppCompatActivity() {
             insets
         }
 
-        // Configurar el RadioButton
-        val radioButton2 = findViewById<RadioButton>(R.id.radioButton2)  // Obtén el RadioButton por su ID
+        // Configurar el RadioButton para redirigir a la actividad Biblioteca
+        val radioButton2 = findViewById<RadioButton>(R.id.radioButton2) // Obtener el RadioButton por su ID
         radioButton2.setOnClickListener {
-            if (radioButton2.isChecked) {  // Verificamos si el RadioButton está seleccionado
-                // Intent para redirigir a otra actividad, por ejemplo, "vaso"
-                val intent = Intent(this, biblioteca::class.java)  // Reemplaza "vaso::class.java" por la actividad que desees
-                startActivity(intent)  // Inicia la actividad deseada
+            if (radioButton2.isChecked) { // Verificamos si el RadioButton está seleccionado
+                // Intent para redirigir a la actividad Biblioteca
+                val intent = Intent(this, BibliotecaActivity::class.java)
+                startActivity(intent) // Inicia la actividad Biblioteca
             }
         }
     }

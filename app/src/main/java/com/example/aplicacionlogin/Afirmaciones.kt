@@ -83,7 +83,7 @@ class Afirmaciones : AppCompatActivity() {
 
         // Redirigir a la actividad biblioteca al presionar el botón de cerrar
         btnCerrar.setOnClickListener {
-            val intent = Intent(this, biblioteca::class.java)
+            val intent = Intent(this, BibliotecaActivity::class.java)
             startActivity(intent)
             finish() // Opcional, si deseas que al cerrar la actividad actual no puedas volver con el botón atrás
         }

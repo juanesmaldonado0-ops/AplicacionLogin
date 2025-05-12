@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/fondo"
+    android:background="@drawable/fondodos"
     tools:context=".reflexiones">
 
     <RadioButton
@@ -36,49 +36,75 @@
         android:id="@+id/textView11"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="164dp"
-        android:layout_marginTop="172dp"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="84dp"
         android:fontFamily="@font/old_italic"
-        android:text="REFLEXIONES"
+        android:text="@string/reflexiones"
+        android:textColor="#000"
+        android:textSize="34sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/button9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="108dp"
-        android:backgroundTint="#CBD8E0"
-        android:textColor="#000"
-        android:layout_marginTop="280dp"
+        android:layout_width="321dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="372dp"
+        android:backgroundTint="#D0DFF0"
         android:fontFamily="@font/old_italic"
-        android:text="El peso de un vaso de agua "
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/button10"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="128dp"
-        android:layout_marginTop="364dp"
+        android:text="@string/El_peso_de_un_vaso_de_agua"
         android:textColor="#000"
-        android:backgroundTint="#CBD8E0"
-        android:fontFamily="@font/old_italic"
-        android:text="La roca en el camino "
+        android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/button11"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="108dp"
-        android:backgroundTint="#CBD8E0"
-        android:textColor="#000"
-        android:layout_marginTop="444dp"
+        android:layout_width="316dp"
+        android:layout_height="74dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="564dp"
+        android:backgroundTint="#D0DFF0"
         android:fontFamily="@font/old_italic"
-        android:text="El coleccionista de insultos"
+        android:text="@string/El_coleccionista_de_insultos"
+        android:textColor="#000"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button10"
+        android:layout_width="320dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="468dp"
+        android:backgroundTint="#D0DFF0"
+        android:fontFamily="@font/old_italic"
+        android:text="@string/La_roca_en_el_camino"
+        android:textColor="#000"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView32"
+        android:layout_width="320dp"
+        android:layout_height="172dp"
+        android:layout_marginStart="171dp"
+        android:layout_marginTop="168dp"
+        android:layout_marginEnd="183dp"
+        android:fontFamily="@font/old_italic"
+        android:gravity="center"
+        android:text="@string/aunque_hoy_sientas_que_te_est_s_rompiendo_por_dentro_recuerda_que_cada_p_gina_que_leas_aqu_puede_ser_un_peque_o_hilo_que_te_ayude_a_reconstruirte"
+        android:textColor="#152066"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.474"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

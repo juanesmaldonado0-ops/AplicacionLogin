@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="titleText" type="id" />
+    <item name="songName1" type="id" />
+    <item name="playButton1" type="id" />
+    <item name="songName2" type="id" />
+    <item name="playButton2" type="id" />
+    <item name="songName3" type="id" />
+    <item name="playButton3" type="id" />
+    <item name="songName4" type="id" />
+    <item name="playButton4" type="id" />
+    <item name="songName5" type="id" />
+    <item name="playButton5" type="id" />
+</resources>

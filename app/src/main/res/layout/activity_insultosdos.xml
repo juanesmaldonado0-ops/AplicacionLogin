@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/insultos"
+    tools:context=".vaso">
+
+    <RadioButton
+        android:id="@+id/radioButton8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:button="@drawable/sig"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="4dp" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="104dp"
+        android:fontFamily="@font/old_italic"
+        android:text="@string/el_coleccionista_de_insultos"
+        android:textColor="#0F2076"
+        android:textSize="26sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="295dp"
+        android:layout_height="239dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="172dp"
+        android:layout_marginEnd="25dp"
+        android:fontFamily="@font/old_italic"
+        android:text="@string/los_estudiantes_de_zen_que_se_encontraban_presentes_se_manifestaron_contra_la_idea_pero_el_anciano_acept_el_desaf_o_entonces_fueron_todos_a_la_plaza_de_la_ciudad_donde_el_joven_empez_a_provocar_al_viejo_arroj_algunas_piedras_en_su_direcci_n_lo_escupi_en_la_cara_y_le_grit_todos_los_insultos_conocidos_ofendiendo_incluso_a_sus_ancestros"
+        android:textSize="19sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.179"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView33"
+        android:layout_width="361dp"
+        android:layout_height="224dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="440dp"
+        android:layout_marginEnd="25dp"
+        android:fontFamily="@font/old_italic"
+        android:text="@string/durante_varias_horas_hizo_todo_lo_posible_para_sacarlo_de_sus_casillas_pero_el_viejo_permaneci_impasible_al_final_de_la_tarde_ya_exhausto_y_humillado_el_joven_guerrero_se_retir_de_la_plaza_decepcionados_por_el_hecho_de_que_su_maestro_aceptara_tantos_insultos_y_provocaciones_los_alumnos_le_preguntaron"
+        android:textSize="19sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

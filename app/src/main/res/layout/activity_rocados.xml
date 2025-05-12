@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/rocados"
+    tools:context=".roca">
+
+    <TextView
+        android:id="@+id/textView36"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="386dp"
+        android:text="@string/salir4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioButton
+        android:id="@+id/radioButton5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="370dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="52dp"
+        android:fontFamily="@font/old_italic"
+        android:text="@string/la_roca_en_el_camino"
+        android:textColor="#0F2076"
+        android:textSize="26sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="324dp"
+        android:layout_height="107dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginEnd="25dp"
+        android:fontFamily="@font/old_italic"
+        android:text="@string/el_campesino_aprendi_lo_que_los_otros_nunca_aprendieron_cada_obst_culo_superado_es_una_oportunidad_para_mejorar_la_propia_condici_n"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="DuplicateIds" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="358dp"
+        android:layout_height="158dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="268dp"
+        android:layout_marginEnd="17dp"
+        android:fontFamily="@font/old_italic"
+        android:gravity="right"
+        android:text="@string/reflexi_n_esta_historia_nos_hace_reflexionar_sobre_la_importancia_de_afrontar_los_obst_culos_que_la_vida_nos_pone_delante_esquivar_los_problemas_buscar_culpables_o_simplemente_quejarnos_no_solucionar_nada_y_la_roca_seguir_estando_all_afrontar_los_obst_culos_actuar_esforzarse_es_lo_que_nos_har_crecer_como_persona"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="DuplicateIds,MissingConstraints,RtlHardcoded" />
+
+    <TextView
+        android:id="@+id/textView34"
+        android:layout_width="288dp"
+        android:layout_height="235dp"
+        android:layout_marginStart="149dp"
+        android:layout_marginTop="452dp"
+        android:layout_marginEnd="125dp"
+        android:fontFamily="@font/old_italic"
+        android:gravity="center|left"
+        android:text="@string/mover_las_rocas_seguramente_implicar_esfuerzo_sufrimiento_capacidad_de_an_lisis_constancia_y_todo_ello_nos_har_m_s_fuertes_y_sabios_superar_los_obst_culos_nos_hace_mejorar_nuestra_condici_n_crecer_evolucionar_la_queja_y_el_evitar_los_problemas_sin_afrontarlos_nos_estanca"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.821"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints,RtlHardcoded" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
