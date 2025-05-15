@@ -15,27 +15,29 @@
         android:text="Recuerda tu camino y celebra lo fuerte que eres"
         android:textSize="12sp"/>
 
-    <!-- Contenedor principal que ocupa toda la pantalla restante -->
+    <!-- Contenedor principal centrado -->
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/textView30"
-        android:fillViewport="true"
-        android:padding="16dp">
+        android:layout_above="@+id/bottomSpace"
+        android:fillViewport="true">
 
         <LinearLayout
-            android:id="@+id/containerRegistros"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:padding="16dp">
 
             <!-- Registro 1 -->
             <LinearLayout
                 android:id="@+id/registro1"
-                android:layout_width="match_parent"
+                android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
                 android:orientation="vertical"
+                android:background="@drawable/card_background"
                 android:padding="16dp">
 
                 <TextView
@@ -49,21 +51,24 @@
 
                 <TextView
                     android:id="@+id/tvContenido1"
-                    android:layout_width="match_parent"
+                    android:layout_width="279dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
+                    android:gravity="center"
+                    android:lineSpacingExtra="4sp"
+                    android:paddingHorizontal="8dp"
                     android:text="Contenido del primer registro"
                     android:textColor="#333333"
-                    android:textSize="16sp"/>
+                    android:textSize="16sp" />
             </LinearLayout>
 
             <!-- Registro 2 -->
             <LinearLayout
                 android:id="@+id/registro2"
-                android:layout_width="match_parent"
+                android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
                 android:orientation="vertical"
+                android:background="@drawable/card_background"
                 android:padding="16dp">
 
                 <TextView
@@ -79,8 +84,10 @@
                     android:id="@+id/tvContenido2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:text="Contenido del segundo registro"
+                    android:gravity="center"
+                    android:lineSpacingExtra="4sp"
+                    android:paddingHorizontal="8dp"
+                    android:text="Contenido del primer registro"
                     android:textColor="#333333"
                     android:textSize="16sp"/>
             </LinearLayout>
@@ -88,10 +95,11 @@
             <!-- Registro 3 -->
             <LinearLayout
                 android:id="@+id/registro3"
-                android:layout_width="match_parent"
+                android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
                 android:orientation="vertical"
+                android:background="@drawable/card_background"
                 android:padding="16dp">
 
                 <TextView
@@ -107,8 +115,10 @@
                     android:id="@+id/tvContenido3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:text="Contenido del tercer registro"
+                    android:gravity="center"
+                    android:lineSpacingExtra="4sp"
+                    android:paddingHorizontal="8dp"
+                    android:text="Contenido del primer registro"
                     android:textColor="#333333"
                     android:textSize="16sp"/>
             </LinearLayout>
@@ -116,10 +126,11 @@
             <!-- Registro 4 -->
             <LinearLayout
                 android:id="@+id/registro4"
-                android:layout_width="match_parent"
+                android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
                 android:orientation="vertical"
+                android:background="@drawable/card_background"
                 android:padding="16dp">
 
                 <TextView
@@ -135,8 +146,10 @@
                     android:id="@+id/tvContenido4"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:text="Contenido del cuarto registro"
+                    android:gravity="center"
+                    android:lineSpacingExtra="4sp"
+                    android:paddingHorizontal="8dp"
+                    android:text="Contenido del primer registro"
                     android:textColor="#333333"
                     android:textSize="16sp"/>
             </LinearLayout>
@@ -144,10 +157,11 @@
             <!-- Registro 5 -->
             <LinearLayout
                 android:id="@+id/registro5"
-                android:layout_width="match_parent"
+                android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
                 android:orientation="vertical"
+                android:background="@drawable/card_background"
                 android:padding="16dp">
 
                 <TextView
@@ -163,8 +177,10 @@
                     android:id="@+id/tvContenido5"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:text="Contenido del quinto registro"
+                    android:gravity="center"
+                    android:lineSpacingExtra="4sp"
+                    android:paddingHorizontal="8dp"
+                    android:text="Contenido del primer registro"
                     android:textColor="#333333"
                     android:textSize="16sp"/>
             </LinearLayout>
@@ -172,9 +188,10 @@
             <!-- Registro 6 -->
             <LinearLayout
                 android:id="@+id/registro6"
-                android:layout_width="match_parent"
+                android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
+                android:background="@drawable/card_background"
                 android:padding="16dp">
 
                 <TextView
@@ -190,12 +207,20 @@
                     android:id="@+id/tvContenido6"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:text="Contenido del sexto registro"
+                    android:gravity="center"
+                    android:lineSpacingExtra="4sp"
+                    android:paddingHorizontal="8dp"
+                    android:text="Contenido del primer registro"
                     android:textColor="#333333"
                     android:textSize="16sp"/>
             </LinearLayout>
-
         </LinearLayout>
     </ScrollView>
+
+    <!-- Espacio inferior para mejor centrado -->
+    <View
+        android:id="@+id/bottomSpace"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_alignParentBottom="true"/>
 </RelativeLayout>

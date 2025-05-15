@@ -16,9 +16,9 @@
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:icon="@drawable/logo_sinfondo"
+        android:label="Healthy Heart"
+        android:roundIcon="@drawable/logo_sinfondo"
         android:supportsRtl="true"
         android:theme="@style/Theme.AplicacionLogin"
         tools:targetApi="31">
@@ -100,10 +100,6 @@
             android:screenOrientation="fullSensor" />
         <activity
             android:name=".DiasDiarioActivity"
-            android:exported="false"
-            android:screenOrientation="fullSensor" />
-        <activity
-            android:name=".FrasesReflexionActivity"
             android:exported="false"
             android:screenOrientation="fullSensor" />
         <activity
