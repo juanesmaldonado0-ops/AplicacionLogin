@@ -21,7 +21,7 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="90dp"
             android:fontFamily="@font/old_italic"
-            android:text="Mis emergencias"
+            android:text="@string/mis_emergencias"
             android:textSize="32sp" />
 
         <androidx.recyclerview.widget.RecyclerView
@@ -42,7 +42,7 @@
             android:layout_marginBottom="26dp"
             android:backgroundTint="#D6E0E7"
             android:fontFamily="@font/old_italic"
-            android:text="CERRAR"
+            android:text="@string/cerrar"
             android:textColor="#000" />
     </RelativeLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

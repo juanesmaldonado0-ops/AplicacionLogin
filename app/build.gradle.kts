@@ -1,7 +1,7 @@
 plugins {
-    id("com.google.gms.google-services")
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.google.services)
 }
 
 android {
@@ -10,13 +10,12 @@ android {
 
     defaultConfig {
         applicationId = "com.example.aplicacionlogin"
-        minSdk = 28
+        minSdk = 23  // aquí cambia de 21 a 23
         targetSdk = 35
         versionCode = 1
         versionName = "1.0"
-
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
+
 
     buildTypes {
         release {
@@ -28,34 +27,34 @@ android {
         }
     }
 
+    buildFeatures {
+        viewBinding = true
+    }
+
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
 
     kotlinOptions {
-        jvmTarget = "11"
-    }
-
-    packagingOptions {
-        resources {
-            excludes += "META-INF/androidx.cardview_cardview.version"
-        }
+        jvmTarget = "17"
     }
 }
 
 dependencies {
-    implementation(platform("com.google.firebase:firebase-bom:33.12.0"))
-    implementation("com.google.firebase:firebase-analytics")
-    implementation("com.google.firebase:firebase-firestore-ktx")
-    implementation(libs.androidx.core.ktx)
-    implementation(libs.androidx.appcompat)
-    implementation(libs.material)
-    implementation(libs.androidx.activity)
-    implementation(libs.androidx.constraintlayout)
+    implementation(platform(libs.firebase.bom))  // BOM controla versiones Firebase
     implementation(libs.firebase.auth.ktx)
     implementation(libs.firebase.database.ktx)
-    implementation(libs.cardview.v7)
+    implementation(libs.firebase.firestore.ktx)
+    implementation(libs.firebase.analytics)
+
+    implementation(libs.androidx.core.ktx)
+    implementation(libs.androidx.appcompat)
+    implementation(libs.androidx.material)
+    implementation(libs.androidx.activity.ktx)
+    implementation(libs.androidx.constraintlayout)
+    implementation(libs.androidx.cardview)
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

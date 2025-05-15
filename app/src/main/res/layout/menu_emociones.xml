@@ -16,7 +16,7 @@
         android:layout_gravity="end"
         android:backgroundTint="#A8B7D0"
         android:fontFamily="@font/old_italic"
-        android:text="Escribir en mi diario"
+        android:text="@string/escribir_en_mi_diario"
         android:textColor="#000000" />
 
     <Button
@@ -27,7 +27,7 @@
         android:layout_marginTop="38dp"
         android:backgroundTint="#A8B7D0"
         android:fontFamily="@font/old_italic"
-        android:text="Días en tu Diario"
+        android:text="@string/d_as_en_tu_diario"
         android:textColor="#000000" />
 
     <Button
@@ -38,7 +38,7 @@
         android:layout_marginTop="38dp"
         android:backgroundTint="#A8B7D0"
         android:fontFamily="@font/old_italic"
-        android:text="Frases diarias de reflexión"
+        android:text="@string/frases_diarias_de_reflexi_n"
         android:textColor="#000000" />
 
     <Button
@@ -49,11 +49,7 @@
         android:layout_marginTop="38dp"
         android:backgroundTint="#A8B7D0"
         android:fontFamily="@font/old_italic"
-        android:text="Ver mis registros anteriores"
+        android:text="@string/ver_mis_registros_anteriores"
         android:textColor="#000000" />
 </LinearLayout>
 
-    <!--
-        Este es un comentario multilínea
-        que explica la sección de botones
-    -->

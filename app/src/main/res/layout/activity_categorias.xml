@@ -72,10 +72,11 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:hint="Buscar"
+                    android:hint="@string/buscar"
                     android:background="@android:color/transparent"
                     android:paddingStart="8dp"
-                    android:textColor="#000000" />
+                    android:textColor="#000000"
+                    tools:ignore="RtlSymmetry" />
             </LinearLayout>
 
             <GridLayout
@@ -95,7 +96,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="No se encontraron resultados"
+                android:text="@string/no_se_encontraron_resultados"
                 android:textSize="16sp"
                 android:textColor="#FF0000"
                 android:visibility="gone"

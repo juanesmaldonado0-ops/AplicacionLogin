@@ -8,6 +8,21 @@
     android:background="@drawable/fondodos"
     tools:context=".reflexiones">
 
+    <Button
+        android:id="@+id/button21"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="664dp"
+        android:backgroundTint="#D0DFF0"
+        android:fontFamily="@font/old_italic"
+        android:text="@string/Mis_reflexiones"
+        android:textColor="#000"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
     <RadioButton
         android:id="@+id/radioButton4"
         android:layout_width="wrap_content"

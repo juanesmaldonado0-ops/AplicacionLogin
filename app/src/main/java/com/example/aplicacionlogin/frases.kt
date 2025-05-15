@@ -23,13 +23,12 @@ class frases : AppCompatActivity() {
             insets
         }
 
-        // Configurar el RadioButton para redirigir a la actividad Biblioteca
-        val radioButton2 = findViewById<RadioButton>(R.id.radioButton2) // Obtener el RadioButton por su ID
-        radioButton2.setOnClickListener {
-            if (radioButton2.isChecked) { // Verificamos si el RadioButton está seleccionado
-                // Intent para redirigir a la actividad Biblioteca
-                val intent = Intent(this, BibliotecaActivity::class.java)
-                startActivity(intent) // Inicia la actividad Biblioteca
+        // Configurar el nuevo RadioButton13 para redirigir a la actividad biblioteca
+        val radioButton13 = findViewById<RadioButton>(R.id.radioButton13)
+        radioButton13.setOnClickListener {
+            if (radioButton13.isChecked) {
+                val intent = Intent(this, BibliotecaActivity::class.java) // Cambia a Biblioteca::class.java si tu clase usa mayúscula
+                startActivity(intent)
             }
         }
     }

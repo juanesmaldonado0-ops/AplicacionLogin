@@ -179,7 +179,7 @@
         android:layout_marginTop="10dp"
         android:ems="10"
         android:gravity="start|top"
-        android:hint="Escribe en qué te gustaría recibir apoyo..."
+        android:hint="@string/escribe_en_qu_te_gustar_a_recibir_apoyo"
         android:inputType="textMultiLine"
         android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"

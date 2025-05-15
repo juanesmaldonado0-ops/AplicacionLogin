@@ -9,11 +9,35 @@
     tools:context=".empezar">
 
 
+    <RadioButton
+        android:id="@+id/radioButton10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="370dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView26"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="386dp"
+        android:text="@string/salir4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
         android:id="@+id/tituloVideoEmpezar"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="84dp"
         android:fontFamily="@font/old_italic"
         android:gravity="center"
         android:text="@string/Empezar_de_cero_contigo"
@@ -31,32 +55,30 @@
         android:layout_width="340dp"
         android:layout_height="183dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="192dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="30dp"
-        app:layout_constraintBottom_toTopOf="@+id/textViewEmpezar"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintHorizontal_bias="0.538"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tituloVideoEmpezar" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textViewEmpezar"
-        android:layout_width="320dp"
-        android:layout_height="260dp"
+        android:layout_width="338dp"
+        android:layout_height="279dp"
         android:layout_marginStart="180dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="396dp"
         android:layout_marginEnd="173dp"
         android:contentDescription="@string/descripcion_texto_accesible"
         android:fontFamily="@font/old_italic"
         android:gravity="center"
         android:text="@string/has_dado_tanto_a_los_dem_s_con_todo_tu_coraz_n_ahora_es_tiempo_de_que_te_des_a_ti_misma_el_amor_y_la_fuerza_que_mereces_recuerda_que_la_verdadera_fortaleza_se_encuentra_en_tu_interior_y_aunque_a_veces_parezca_que_caminas_sola_el_universo_siempre_tiene_un_camino_preparado_para_quienes_se_atreven_a_creer_en_s_mismos_lo_mejor_est_por_venir_y_t_eres_capaz_de_lograr_todo_lo_que_te_propongas"
         android:textColor="#161F4E"
-        android:textSize="18sp"
+        android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.515"
+        app:layout_constraintHorizontal_bias="0.514"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/videoViewEmpezar" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

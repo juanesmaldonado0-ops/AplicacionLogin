@@ -2,6 +2,7 @@ package com.example.aplicacionlogin
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import android.widget.RadioButton
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -22,6 +23,13 @@ class rocados : AppCompatActivity() {
                 val intent = Intent(this, reflexiones::class.java)
                 startActivity(intent) // Iniciar la actividad Reflexiones
             }
+        }
+
+        // Dirección del botón button22 hacia rocareflexion
+        val button22 = findViewById<Button>(R.id.button22)
+        button22.setOnClickListener {
+            val intent = Intent(this, rocareflexion::class.java)
+            startActivity(intent)
         }
 
         // Ajuste para que el contenido se muestre correctamente debajo de las barras del sistema

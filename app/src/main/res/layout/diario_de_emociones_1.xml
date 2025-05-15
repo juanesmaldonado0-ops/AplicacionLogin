@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:fontFamily="@font/old_italic"
-        android:text="DIARIO DE EMOCIONES"
+        android:text="@string/diario_de_emociones"
         android:textColor="#000"
         android:textSize="24sp"
         android:textStyle="bold" />
@@ -27,15 +27,7 @@
         android:gravity="center"
         android:fontFamily="@font/carattere"
         android:lineSpacingExtra="6dp"
-        android:text="Este es tu espacio seguro.
-Escribe con libertad, sin juicios,
-solo contigo mismo.
- Cada palabra es un paso hacia
-tu bienestar.
- Todo quedará guardado para que
-más adelante veas tu avance y
- te sientas orgulloso
-de lo lejos que has llegado"
+        android:text="@string/este_es_tu_espacio_seguro_escribe_con_libertad_sin_juicios_solo_contigo_mismo_cada_palabra_es_un_paso_hacia_tu_bienestar_todo_quedar_guardado_para_que_m_s_adelante_veas_tu_avance_y_te_sientas_orgulloso_de_lo_lejos_que_has_llegado"
         android:textColor="#202F71"
         android:textSize="32sp" />
 
@@ -44,7 +36,7 @@ de lo lejos que has llegado"
         android:id="@+id/btnMenu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Menú"
+        android:text="@string/men"
         android:textColor="#000"
         android:shadowColor="#000"
         android:shadowRadius="5"

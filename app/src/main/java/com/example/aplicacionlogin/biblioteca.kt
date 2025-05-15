@@ -27,6 +27,11 @@ class BibliotecaActivity : AppCompatActivity() {
             startActivity(Intent(this, frases::class.java))
         }
 
+        findViewById<Button>(R.id.button8).setOnClickListener {
+            // 👉 Redirigir a la activity de playlist
+            startActivity(Intent(this, playlist::class.java))
+        }
+
         findViewById<ImageButton>(R.id.imageButton2).setOnClickListener {
             startActivity(Intent(this, DiarioActivity::class.java))
         }
