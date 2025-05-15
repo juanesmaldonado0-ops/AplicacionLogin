@@ -1,5 +1,6 @@
 package com.example.aplicacionlogin
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
@@ -39,7 +40,14 @@ class vasoreflexion : AppCompatActivity() {
                         .setValue(data)
                         .addOnSuccessListener {
                             Toast.makeText(this, "Reflexión guardada correctamente.", Toast.LENGTH_SHORT).show()
+
+                            // Limpiar el campo de texto
                             reflexionEditText.text.clear()
+
+                            // Redirigir a la pantalla de base de reflexiones
+                            val intent = Intent(this, basereflexion::class.java)
+                            startActivity(intent)
+                            finish()
                         }
                         .addOnFailureListener {
                             Toast.makeText(this, "Error al guardar.", Toast.LENGTH_SHORT).show()

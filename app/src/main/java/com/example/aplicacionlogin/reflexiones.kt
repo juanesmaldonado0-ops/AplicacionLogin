@@ -11,47 +11,49 @@ import androidx.core.view.WindowInsetsCompat
 
 class reflexiones : AppCompatActivity() {
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge() // Activar Edge to Edge
+        enableEdgeToEdge()
         setContentView(R.layout.activity_reflexiones)
 
-        // Configuración del botón "El peso de un vaso de agua"
-        val btnVaso = findViewById<Button>(R.id.button9) // Obtener el botón con ID button9
+        // Botón "El peso de un vaso de agua"
+        val btnVaso = findViewById<Button>(R.id.button9)
         btnVaso.setOnClickListener {
-            // Intent para redirigir a la actividad Vaso
             val intent = Intent(this, vaso::class.java)
-            startActivity(intent) // Iniciar la actividad Vaso
+            startActivity(intent)
         }
 
-        // Configuración del RadioButton para redirigir a la actividad Biblioteca
-        val radioButton4 = findViewById<RadioButton>(R.id.radioButton4) // Obtener el RadioButton con ID radioButton4
+        // Botón "La roca en el camino"
+        val button10 = findViewById<Button>(R.id.button10)
+        button10.setOnClickListener {
+            val intent = Intent(this, roca::class.java)
+            startActivity(intent)
+        }
+
+        // Botón "El coleccionista de insultos"
+        val button11 = findViewById<Button>(R.id.button11)
+        button11.setOnClickListener {
+            val intent = Intent(this, insultos::class.java)
+            startActivity(intent)
+        }
+
+        // RadioButton para ir a la Biblioteca
+        val radioButton4 = findViewById<RadioButton>(R.id.radioButton4)
         radioButton4.setOnClickListener {
-            if (radioButton4.isChecked) { // Verificamos si el RadioButton está seleccionado
-                // Intent para redirigir a la actividad Biblioteca
+            if (radioButton4.isChecked) {
                 val intent = Intent(this, BibliotecaActivity::class.java)
-                startActivity(intent) // Iniciar la actividad Biblioteca
+                startActivity(intent)
             }
         }
 
-        // **Nuevo código**: Configuración del botón "La roca en el camino"
-        val button10 = findViewById<Button>(R.id.button10) // Obtener el botón con ID button10
-        button10.setOnClickListener {
-            // Intent para redirigir a la actividad roca
-            val intent = Intent(this, roca::class.java)
-            startActivity(intent) // Iniciar la actividad roca
+        // ✅ Botón "Mis reflexiones" para abrir activity_basereflexion.xml
+        val button21 = findViewById<Button>(R.id.button21)
+        button21.setOnClickListener {
+            val intent = Intent(this, basereflexion::class.java)
+            startActivity(intent)
         }
 
-        // Configuración del botón "El coleccionista de insultos"
-        val button11 = findViewById<Button>(R.id.button11) // Obtener el botón con ID button11
-        button11.setOnClickListener {
-            // Intent para redirigir a la actividad Insultos
-            val intent = Intent(this, insultos::class.java)
-            startActivity(intent) // Iniciar la actividad Insultos
-        }
-
-        // Ajuste para que el contenido se muestre correctamente debajo de las barras del sistema
+        // Ajuste visual para Edge-to-Edge
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
