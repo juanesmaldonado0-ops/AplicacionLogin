@@ -80,6 +80,10 @@
             android:exported="false"
             android:screenOrientation="fullSensor" />
         <activity
+            android:name=".vasoreflexion"
+            android:exported="false"
+            android:screenOrientation="fullSensor" />
+        <activity
             android:name=".reflexiones"
             android:exported="false"
             android:screenOrientation="fullSensor" />

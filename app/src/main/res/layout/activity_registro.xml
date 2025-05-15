@@ -29,20 +29,21 @@
         android:layout_marginTop="20dp"
         android:fontFamily="@font/old_italic"
         android:text="@string/como_te_gustaria_que_te_llamemos"
-        android:textSize="16sp"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView19" />
 
     <TextView
         android:id="@+id/textView21"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_width="336dp"
+        android:layout_height="22dp"
+        android:layout_marginTop="12dp"
         android:fontFamily="@font/old_italic"
         android:text="@string/dejanos_tu_correo_para_estar_en_contacto_contigo"
-        android:textSize="16sp"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextText" />
 
@@ -53,7 +54,7 @@
         android:layout_marginTop="10dp"
         android:fontFamily="@font/old_italic"
         android:text="@string/elige_una_contrasena_segura"
-        android:textSize="16sp"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress2" />
@@ -65,21 +66,21 @@
         android:layout_marginTop="15dp"
         android:fontFamily="@font/old_italic"
         android:text="@string/cuando_celebramos_tu_dia_especial"
-        android:textSize="16sp"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword2" />
 
     <TextView
         android:id="@+id/textView24"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="349dp"
+        android:layout_height="20dp"
         android:layout_marginTop="8dp"
         android:fontFamily="@font/old_italic"
         android:text="@string/como_te_identificas"
-        android:textSize="16sp"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.476"
+        app:layout_constraintHorizontal_bias="0.741"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextDate" />
 
@@ -90,7 +91,7 @@
         android:layout_marginTop="16dp"
         android:fontFamily="@font/old_italic"
         android:text="@string/apoyo_deseado"
-        android:textSize="16sp"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextMultiLine" />
@@ -99,7 +100,7 @@
         android:id="@+id/button3"
         android:layout_width="104dp"
         android:layout_height="48dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="16dp"
         android:backgroundTint="#BBD6EB"
         android:elevation="8dp"
         android:fontFamily="@font/old_italic"
@@ -108,6 +109,7 @@
         android:textSize="20sp"
         app:cornerRadius="12dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextMultiLine2" />
 
@@ -129,8 +131,8 @@
 
     <EditText
         android:id="@+id/editTextTextPassword2"
-        android:layout_width="283dp"
-        android:layout_height="34dp"
+        android:layout_width="309dp"
+        android:layout_height="46dp"
         android:layout_marginTop="15dp"
         android:ems="10"
         android:hint="@string/hint_contrasena_segura"
@@ -142,8 +144,8 @@
 
     <EditText
         android:id="@+id/editTextTextEmailAddress2"
-        android:layout_width="291dp"
-        android:layout_height="40dp"
+        android:layout_width="305dp"
+        android:layout_height="43dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="25dp"
         android:layout_marginEnd="32dp"
@@ -158,8 +160,8 @@
 
     <EditText
         android:id="@+id/editTextText"
-        android:layout_width="288dp"
-        android:layout_height="24dp"
+        android:layout_width="299dp"
+        android:layout_height="36dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="32dp"
