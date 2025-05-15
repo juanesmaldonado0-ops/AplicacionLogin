@@ -12,7 +12,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
         android:fontFamily="@font/old_italic"
-        android:text="@string/recuerda_tu_camino_y_celebra_lo_fuerte_que_eres"
+        android:text="Recuerda tu camino y celebra lo fuerte que eres"
         android:textSize="12sp"/>
 
     <!-- Contenedor principal que ocupa toda la pantalla restante -->
@@ -42,7 +42,7 @@
                     android:id="@+id/tvFecha1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/_01_01_2023"
+                    android:text="01/01/2023"
                     android:textColor="#000000"
                     android:textSize="14sp"
                     android:textStyle="bold"/>
@@ -52,7 +52,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
-                    android:text="@string/contenido_del_primer_registro"
+                    android:text="Contenido del primer registro"
                     android:textColor="#333333"
                     android:textSize="16sp"/>
             </LinearLayout>
@@ -70,7 +70,7 @@
                     android:id="@+id/tvFecha2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/_02_01_2023"
+                    android:text="02/01/2023"
                     android:textColor="#000000"
                     android:textSize="14sp"
                     android:textStyle="bold"/>
@@ -80,7 +80,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
-                    android:text="@string/contenido_del_segundo_registro"
+                    android:text="Contenido del segundo registro"
                     android:textColor="#333333"
                     android:textSize="16sp"/>
             </LinearLayout>
@@ -98,7 +98,7 @@
                     android:id="@+id/tvFecha3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/_03_01_2023"
+                    android:text="03/01/2023"
                     android:textColor="#000000"
                     android:textSize="14sp"
                     android:textStyle="bold"/>
@@ -108,7 +108,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
-                    android:text="@string/contenido_del_tercer_registro"
+                    android:text="Contenido del tercer registro"
                     android:textColor="#333333"
                     android:textSize="16sp"/>
             </LinearLayout>
@@ -126,7 +126,7 @@
                     android:id="@+id/tvFecha4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/_04_01_2023"
+                    android:text="04/01/2023"
                     android:textColor="#000000"
                     android:textSize="14sp"
                     android:textStyle="bold"/>
@@ -136,7 +136,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
-                    android:text="@string/contenido_del_cuarto_registro"
+                    android:text="Contenido del cuarto registro"
                     android:textColor="#333333"
                     android:textSize="16sp"/>
             </LinearLayout>
@@ -154,7 +154,7 @@
                     android:id="@+id/tvFecha5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/_05_01_2023"
+                    android:text="05/01/2023"
                     android:textColor="#000000"
                     android:textSize="14sp"
                     android:textStyle="bold"/>
@@ -164,7 +164,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
-                    android:text="@string/contenido_del_quinto_registro"
+                    android:text="Contenido del quinto registro"
                     android:textColor="#333333"
                     android:textSize="16sp"/>
             </LinearLayout>
@@ -181,7 +181,7 @@
                     android:id="@+id/tvFecha6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/_06_01_2023"
+                    android:text="06/01/2023"
                     android:textColor="#000000"
                     android:textSize="14sp"
                     android:textStyle="bold"/>
@@ -191,7 +191,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
-                    android:text="@string/contenido_del_sexto_registro"
+                    android:text="Contenido del sexto registro"
                     android:textColor="#333333"
                     android:textSize="16sp"/>
             </LinearLayout>

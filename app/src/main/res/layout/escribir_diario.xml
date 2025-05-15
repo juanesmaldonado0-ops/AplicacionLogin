@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/musica"
@@ -16,7 +15,7 @@
         android:layout_marginStart="5dp"
         android:layout_marginTop="5dp"
         android:background="@null"
-        android:contentDescription="@string/volver"
+        android:contentDescription="Volver"
         android:src="@drawable/ic_back" />
 
     <EditText
@@ -24,11 +23,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
-        android:hint="@string/mm_dd_yyyy"
+        android:hint="mm/dd/yyyy"
         android:inputType="none"
         android:focusable="false"
-        android:layout_marginTop="8dp"
-        tools:ignore="TextFields" />
+        android:layout_marginTop="8dp"/>
 
     <LinearLayout
         android:id="@+id/botonesVerticales"
@@ -70,7 +68,7 @@
         android:layout_marginStart="-36dp"
         android:layout_marginTop="80dp"
         android:layout_toEndOf="@id/botonesVerticales"
-        android:hint="@string/escribe_tus_pensamientos_y_reflexiones"
+        android:hint="Escribe tus pensamientos y reflexiones..."
         android:padding="16dp" />
 
     <Button
@@ -79,7 +77,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:text="@string/guardar"
+        android:text="Guardar"
         android:textColor="#000"
         android:fontFamily="@font/old_italic"
         android:shadowColor="#000"
@@ -88,3 +86,7 @@
         android:backgroundTint="#CBD8E0"/>
 </RelativeLayout>
 
+    <!--
+        Este es un comentario multilínea
+        que explica la sección de botones
+    -->

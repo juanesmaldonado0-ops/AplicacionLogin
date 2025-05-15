@@ -25,16 +25,16 @@ class EmergenciaActivity : AppCompatActivity() {
 
         val textInput = findViewById<TextInputEditText>(R.id.textInputEditText)
         val confirmarBtn = findViewById<Button>(R.id.button15)
-        val historialBtn = findViewById<Button>(R.id.button16)
-
 
         confirmarBtn.setOnClickListener {
             val mensaje = textInput.text.toString().trim()
+
 
             if (mensaje.isEmpty()) {
                 Toast.makeText(this, "Por favor, describe el problema", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
+
 
             val userId = auth.currentUser?.uid
             if (userId == null) {
@@ -42,18 +42,22 @@ class EmergenciaActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
 
+
             val notaEmergencia = hashMapOf(
                 "mensaje" to mensaje,
                 "timestamp" to Calendar.getInstance().time
             )
 
+
             confirmarBtn.isEnabled = false
+
 
             db.collection("usuarios")
                 .document(userId)
                 .collection("emergencias")
                 .add(notaEmergencia)
                 .addOnSuccessListener {
+
                     Toast.makeText(this, "Mensaje de emergencia enviado", Toast.LENGTH_SHORT).show()
                     textInput.text?.clear()
                     val intent = Intent(this, LlamarActivity::class.java)
@@ -61,13 +65,10 @@ class EmergenciaActivity : AppCompatActivity() {
                     finish()
                 }
                 .addOnFailureListener { e ->
+
                     Toast.makeText(this, "Error: ${e.message}", Toast.LENGTH_SHORT).show()
-                    confirmarBtn.isEnabled = true
+                    confirmarBtn.isEnabled = true // Rehabilitar el botón si ocurre un error
                 }
         }
-
-// Mover el listener del botón de historial fuera del onClick del botón confirmar
-        historialBtn.setOnClickListener {
-            val intent = Intent(this, HistorialEmergencia::class.java)
-            startActivity(intent)
-        }}}
+    }
+}

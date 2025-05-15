@@ -13,6 +13,7 @@ class Diario_Menu : AppCompatActivity() {
         // Configuración de los botones
         val btnEscribir = findViewById<Button>(R.id.btnEscribir)
         val btnDias = findViewById<Button>(R.id.btnDias)
+        val btnFrases = findViewById<Button>(R.id.btnFrases)
         val btnVerRegistros = findViewById<Button>(R.id.btnVerRegistros)
 
         btnEscribir.setOnClickListener {
@@ -27,6 +28,11 @@ class Diario_Menu : AppCompatActivity() {
             startActivity(intent)
         }
 
+        btnFrases.setOnClickListener {
+            // Mostrar frases de reflexión
+            val intent = Intent(this, FrasesReflexionActivity::class.java)
+            startActivity(intent)
+        }
 
         btnVerRegistros.setOnClickListener {
             // Ver entradas anteriores
