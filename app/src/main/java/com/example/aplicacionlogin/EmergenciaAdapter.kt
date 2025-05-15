@@ -8,28 +8,30 @@ import androidx.recyclerview.widget.RecyclerView
 import java.text.SimpleDateFormat
 import java.util.*
 
-class EmergenciaAdapter(private val lista: List<Emergencia>) :
-    RecyclerView.Adapter<EmergenciaAdapter.ViewHolder>() {
+class EmergenciaAdapter(private val emergencias: List<Emergencia>) :
+    RecyclerView.Adapter<EmergenciaAdapter.EmergenciaViewHolder>() {
 
-    class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        val mensaje: TextView = view.findViewById(R.id.mensajeText)
-        val fecha: TextView = view.findViewById(R.id.fechaText)
+    private val dateFormat = SimpleDateFormat("dd/MM/yyyy HH:mm", Locale.getDefault())
+
+    // Clase ViewHolder que contiene las vistas
+    class EmergenciaViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        val tvFecha: TextView = itemView.findViewById(R.id.tvFecha)
+        val tvMensaje: TextView = itemView.findViewById(R.id.tvMensaje)
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): EmergenciaViewHolder {
         val view = LayoutInflater.from(parent.context)
             .inflate(R.layout.activity_item_emergencia, parent, false)
-        return ViewHolder(view)
+        return EmergenciaViewHolder(view)
     }
 
-    override fun getItemCount(): Int = lista.size
-
-    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val emergencia = lista[position]
-        val formato = SimpleDateFormat("dd/MM/yyyy HH:mm", Locale.getDefault())
-        val fechaFormateada = emergencia.timestamp?.let { formato.format(it) } ?: "Sin fecha"
-
-        holder.mensaje.text = emergencia.mensaje
-        holder.fecha.text = fechaFormateada
+    override fun onBindViewHolder(holder: EmergenciaViewHolder, position: Int) {
+        val emergencia = emergencias[position]
+        holder.tvFecha.text = dateFormat.format(emergencia.timestamp)
+        holder.tvMensaje.text = emergencia.mensaje
     }
+
+    // Método requerido: Retornar el número de ítems
+    override fun getItemCount(): Int = emergencias.size
 }
