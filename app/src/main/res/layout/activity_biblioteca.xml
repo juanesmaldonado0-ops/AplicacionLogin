@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/fondo"
 
-    tools:context=".biblioteca">
+    tools:context=".BibliotecaActivity">
 
     <TextView
         android:id="@+id/textView2"

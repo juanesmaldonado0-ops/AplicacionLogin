@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/frases_fondo"
+    android:padding="16dp">
+
+    <Button
+        android:id="@+id/button12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:text="@string/mis_frases"
+        android:textColor="#000"
+        android:fontFamily="@font/old_italic"
+        android:backgroundTint="#CBD8E0"/>
+
+    <Button
+        android:id="@+id/button13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="240dp"
+        android:layout_marginTop="343dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="313dp"
+        android:backgroundTint="#CBD8E0"
+        android:fontFamily="@font/old_italic"
+        android:text="@string/Guardar"
+        android:textColor="#000" />
+
+    <TextView
+        android:id="@+id/textView29"
+        android:layout_width="191dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="33dp"
+        android:layout_marginEnd="204dp"
+        android:layout_marginBottom="365dp"
+        android:fontFamily="@font/carattere"
+        android:text="@string/cada_pensamiento_que_escribes_es_un_regalo_para_tu_futuro_yo_deja_aqu_tus_palabras_sin_miedo_ni_juicios_con_el_tiempo_ver_s_c_mo_has_crecido"
+        android:textColor="#202F71"
+        android:textSize="29sp" />
+</RelativeLayout>

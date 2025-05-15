@@ -1,8 +1,10 @@
 package com.example.aplicacionlogin
 
+import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.widget.MediaController
+import android.widget.RadioButton
 import android.widget.VideoView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -39,6 +41,14 @@ class escuchalo : AppCompatActivity() {
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
+        }
+
+        // 7. Referencia al RadioButton y asignar OnClickListener
+        val radioButton: RadioButton = findViewById(R.id.radioButton12)
+        radioButton.setOnClickListener {
+            // Crear un Intent para ir a la actividad de videos
+            val intent = Intent(this, videos::class.java)
+            startActivity(intent)
         }
     }
 }

@@ -2,7 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.aplicacionlogin">
-    <!-- Permisos necesarios para Firebase -->
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
@@ -16,12 +15,25 @@
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@drawable/logo_sinfondo"
-        android:label="Healthy Heart"
-        android:roundIcon="@drawable/logo_sinfondo"
+
+        android:label="@string/app_name"
+
         android:supportsRtl="true"
         android:theme="@style/Theme.AplicacionLogin"
         tools:targetApi="31">
+        <activity
+            android:name=".basereflexion"
+            android:exported="false"
+            tools:ignore="MissingClass" />
+        <activity
+            android:name=".insultosreflexion"
+            android:exported="false" />
+        <activity
+            android:name=".rocareflexion"
+            android:exported="false" />
+        <activity
+            android:name=".vasoreflexion"
+            android:exported="false" />
         <activity
             android:name=".playlist"
             android:exported="false" />
@@ -51,7 +63,7 @@
             android:exported="false" />
         <activity
             android:name=".roca"
-            android:exported="true" /> <!-- Ajustado aquí -->
+            android:exported="true" />
         <activity
             android:name=".Liberate"
             android:exported="false" />
@@ -70,54 +82,71 @@
         <activity
             android:name=".activity_registro"
             android:exported="false"
-            android:screenOrientation="fullSensor" />
+            android:screenOrientation="fullSensor"
+            tools:ignore="DiscouragedApi" />
         <activity
             android:name=".frases"
             android:exported="false"
-            android:screenOrientation="fullSensor" />
+            android:screenOrientation="fullSensor"
+            tools:ignore="DiscouragedApi" />
         <activity
             android:name=".vaso"
             android:exported="false"
-            android:screenOrientation="fullSensor" />
+            android:screenOrientation="fullSensor"
+            tools:ignore="DiscouragedApi" />
         <activity
             android:name=".reflexiones"
             android:exported="false"
-            android:screenOrientation="fullSensor" />
+            android:screenOrientation="fullSensor"
+            tools:ignore="DiscouragedApi" />
         <activity
             android:name=".BibliotecaActivity"
             android:exported="false"
-            android:screenOrientation="fullSensor" />
+            android:screenOrientation="fullSensor"
+            tools:ignore="DiscouragedApi" />
         <activity
             android:name=".bienvenida"
             android:exported="false" />
         <activity
             android:name=".DiarioActivity"
             android:exported="false"
-            android:screenOrientation="fullSensor" />
+            android:screenOrientation="fullSensor"
+            tools:ignore="DiscouragedApi" />
         <activity
             android:name=".Diario_Menu"
             android:exported="false"
-            android:screenOrientation="fullSensor" />
+            android:screenOrientation="fullSensor"
+            tools:ignore="DiscouragedApi" />
         <activity
             android:name=".DiasDiarioActivity"
             android:exported="false"
-            android:screenOrientation="fullSensor" />
+            android:screenOrientation="fullSensor"
+            tools:ignore="DiscouragedApi" />
+        <activity
+            android:name=".FrasesReflexionActivity"
+            android:exported="false"
+            android:screenOrientation="fullSensor"
+            tools:ignore="DiscouragedApi" />
         <activity
             android:name=".VerRegistrosActivity"
             android:exported="false"
-            android:screenOrientation="fullSensor" />
+            android:screenOrientation="fullSensor"
+            tools:ignore="DiscouragedApi" />
         <activity
             android:name=".EscribirDiarioActivity"
             android:exported="false"
-            android:screenOrientation="fullSensor" />
+            android:screenOrientation="fullSensor"
+            tools:ignore="DiscouragedApi" />
         <activity
             android:name=".EmergenciaActivity"
             android:exported="false"
-            android:screenOrientation="fullSensor" />
+            android:screenOrientation="fullSensor"
+            tools:ignore="DiscouragedApi" />
         <activity
             android:name=".LlamarActivity"
             android:exported="false"
-            android:screenOrientation="fullSensor" />
+            android:screenOrientation="fullSensor"
+            tools:ignore="DiscouragedApi" />
         <activity android:name=".ActivityRegistro" />
         <activity
             android:name=".MainActivity"

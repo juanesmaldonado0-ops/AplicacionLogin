@@ -15,7 +15,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="90dp"
         android:fontFamily="@font/old_italic"
-        android:text="Modo Emergencia"
+        android:text="@string/modo_emergencia"
         android:textSize="32sp" />
 
     <Button
@@ -27,9 +27,9 @@
         android:layout_marginTop="50dp"
         android:backgroundTint="#D6E0E7"
         android:fontFamily="@font/old_italic"
-        android:text="Necesito Ayuda Urgente"
+        android:text="@string/necesito_ayuda_urgente"
         android:textColor="#000"
-        android:textSize="19dp" />
+        android:textSize="19sp" />
 
     <Button
         android:id="@+id/button15"
@@ -39,7 +39,7 @@
         android:layout_marginBottom="39dp"
         android:backgroundTint="#D6E0E7"
         android:fontFamily="@font/old_italic"
-        android:text="CONFIRMAR"
+        android:text="@string/confirmar"
         android:textColor="#000" />
 
     <com.google.android.material.textfield.TextInputEditText
@@ -56,7 +56,7 @@
         android:layout_marginBottom="25dp"
         android:background="@drawable/roundstyle"
         android:fontFamily="@font/old_italic"
-        android:hint="Intenta describir el problema brevemente para ayudarte de la manera mas rapida posible..."
+        android:hint="@string/intenta_describir_el_problema_brevemente_para_ayudarte_de_la_manera_mas_rapida_posible"
         android:visibility="visible" />
 
     <Button
@@ -72,6 +72,6 @@
         android:fontFamily="@font/old_italic"
         android:layout_marginBottom="89dp"
         android:layout_toEndOf="@+id/button15"
-        android:text="HISTORIAL" />
+        android:text="@string/historial" />
 
 </RelativeLayout>

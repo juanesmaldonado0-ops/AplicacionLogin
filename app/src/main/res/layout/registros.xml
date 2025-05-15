@@ -12,70 +12,65 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
         android:fontFamily="@font/old_italic"
-        android:text="Recuerda tu camino y celebra lo fuerte que eres"
+        android:text="@string/recuerda_tu_camino_y_celebra_lo_fuerte_que_eres"
         android:textSize="12sp"/>
 
-    <!-- Contenedor principal centrado -->
+    <!-- Contenedor principal que ocupa toda la pantalla restante -->
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/textView30"
-        android:layout_above="@+id/bottomSpace"
-        android:fillViewport="true">
+        android:fillViewport="true"
+        android:padding="16dp">
 
         <LinearLayout
+            android:id="@+id/containerRegistros"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:gravity="center_horizontal"
-            android:padding="16dp">
+            android:orientation="vertical">
 
             <!-- Registro 1 -->
             <LinearLayout
                 android:id="@+id/registro1"
-                android:layout_width="300dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
                 android:orientation="vertical"
-                android:background="@drawable/card_background"
                 android:padding="16dp">
 
                 <TextView
                     android:id="@+id/tvFecha1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="01/01/2023"
+                    android:text="@string/_01_01_2023"
                     android:textColor="#000000"
                     android:textSize="14sp"
                     android:textStyle="bold"/>
 
                 <TextView
                     android:id="@+id/tvContenido1"
-                    android:layout_width="279dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:lineSpacingExtra="4sp"
-                    android:paddingHorizontal="8dp"
-                    android:text="Contenido del primer registro"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/contenido_del_primer_registro"
                     android:textColor="#333333"
-                    android:textSize="16sp" />
+                    android:textSize="16sp"/>
             </LinearLayout>
 
             <!-- Registro 2 -->
             <LinearLayout
                 android:id="@+id/registro2"
-                android:layout_width="300dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
                 android:orientation="vertical"
-                android:background="@drawable/card_background"
                 android:padding="16dp">
 
                 <TextView
                     android:id="@+id/tvFecha2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="02/01/2023"
+                    android:text="@string/_02_01_2023"
                     android:textColor="#000000"
                     android:textSize="14sp"
                     android:textStyle="bold"/>
@@ -84,10 +79,8 @@
                     android:id="@+id/tvContenido2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:lineSpacingExtra="4sp"
-                    android:paddingHorizontal="8dp"
-                    android:text="Contenido del primer registro"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/contenido_del_segundo_registro"
                     android:textColor="#333333"
                     android:textSize="16sp"/>
             </LinearLayout>
@@ -95,18 +88,17 @@
             <!-- Registro 3 -->
             <LinearLayout
                 android:id="@+id/registro3"
-                android:layout_width="300dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
                 android:orientation="vertical"
-                android:background="@drawable/card_background"
                 android:padding="16dp">
 
                 <TextView
                     android:id="@+id/tvFecha3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="03/01/2023"
+                    android:text="@string/_03_01_2023"
                     android:textColor="#000000"
                     android:textSize="14sp"
                     android:textStyle="bold"/>
@@ -115,10 +107,8 @@
                     android:id="@+id/tvContenido3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:lineSpacingExtra="4sp"
-                    android:paddingHorizontal="8dp"
-                    android:text="Contenido del primer registro"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/contenido_del_tercer_registro"
                     android:textColor="#333333"
                     android:textSize="16sp"/>
             </LinearLayout>
@@ -126,18 +116,17 @@
             <!-- Registro 4 -->
             <LinearLayout
                 android:id="@+id/registro4"
-                android:layout_width="300dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
                 android:orientation="vertical"
-                android:background="@drawable/card_background"
                 android:padding="16dp">
 
                 <TextView
                     android:id="@+id/tvFecha4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="04/01/2023"
+                    android:text="@string/_04_01_2023"
                     android:textColor="#000000"
                     android:textSize="14sp"
                     android:textStyle="bold"/>
@@ -146,10 +135,8 @@
                     android:id="@+id/tvContenido4"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:lineSpacingExtra="4sp"
-                    android:paddingHorizontal="8dp"
-                    android:text="Contenido del primer registro"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/contenido_del_cuarto_registro"
                     android:textColor="#333333"
                     android:textSize="16sp"/>
             </LinearLayout>
@@ -157,18 +144,17 @@
             <!-- Registro 5 -->
             <LinearLayout
                 android:id="@+id/registro5"
-                android:layout_width="300dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
                 android:orientation="vertical"
-                android:background="@drawable/card_background"
                 android:padding="16dp">
 
                 <TextView
                     android:id="@+id/tvFecha5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="05/01/2023"
+                    android:text="@string/_05_01_2023"
                     android:textColor="#000000"
                     android:textSize="14sp"
                     android:textStyle="bold"/>
@@ -177,10 +163,8 @@
                     android:id="@+id/tvContenido5"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:lineSpacingExtra="4sp"
-                    android:paddingHorizontal="8dp"
-                    android:text="Contenido del primer registro"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/contenido_del_quinto_registro"
                     android:textColor="#333333"
                     android:textSize="16sp"/>
             </LinearLayout>
@@ -188,17 +172,16 @@
             <!-- Registro 6 -->
             <LinearLayout
                 android:id="@+id/registro6"
-                android:layout_width="300dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:background="@drawable/card_background"
                 android:padding="16dp">
 
                 <TextView
                     android:id="@+id/tvFecha6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="06/01/2023"
+                    android:text="@string/_06_01_2023"
                     android:textColor="#000000"
                     android:textSize="14sp"
                     android:textStyle="bold"/>
@@ -207,20 +190,12 @@
                     android:id="@+id/tvContenido6"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:lineSpacingExtra="4sp"
-                    android:paddingHorizontal="8dp"
-                    android:text="Contenido del primer registro"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/contenido_del_sexto_registro"
                     android:textColor="#333333"
                     android:textSize="16sp"/>
             </LinearLayout>
+
         </LinearLayout>
     </ScrollView>
-
-    <!-- Espacio inferior para mejor centrado -->
-    <View
-        android:id="@+id/bottomSpace"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_alignParentBottom="true"/>
 </RelativeLayout>

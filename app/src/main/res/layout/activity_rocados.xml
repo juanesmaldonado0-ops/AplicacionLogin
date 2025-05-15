@@ -8,6 +8,22 @@
     android:background="@drawable/rocados"
     tools:context=".roca">
 
+    <Button
+        android:id="@+id/button22"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="648dp"
+        android:backgroundTint="#D0DFF0"
+        android:fontFamily="@font/old_italic"
+        android:text="@string/mi_reflexion"
+        android:textColor="#000"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
     <TextView
         android:id="@+id/textView36"
         android:layout_width="wrap_content"
@@ -46,7 +62,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView13"
+        android:id="@+id/textView74"
         android:layout_width="324dp"
         android:layout_height="107dp"
         android:layout_marginStart="24dp"
@@ -62,11 +78,11 @@
         tools:ignore="DuplicateIds" />
 
     <TextView
-        android:id="@+id/textView13"
+        android:id="@+id/textView75"
         android:layout_width="358dp"
         android:layout_height="158dp"
         android:layout_marginStart="36dp"
-        android:layout_marginTop="268dp"
+        android:layout_marginTop="248dp"
         android:layout_marginEnd="17dp"
         android:fontFamily="@font/old_italic"
         android:gravity="right"
@@ -80,17 +96,17 @@
 
     <TextView
         android:id="@+id/textView34"
-        android:layout_width="288dp"
-        android:layout_height="235dp"
+        android:layout_width="319dp"
+        android:layout_height="195dp"
         android:layout_marginStart="149dp"
-        android:layout_marginTop="452dp"
+        android:layout_marginTop="420dp"
         android:layout_marginEnd="125dp"
         android:fontFamily="@font/old_italic"
         android:gravity="center|left"
         android:text="@string/mover_las_rocas_seguramente_implicar_esfuerzo_sufrimiento_capacidad_de_an_lisis_constancia_y_todo_ello_nos_har_m_s_fuertes_y_sabios_superar_los_obst_culos_nos_hace_mejorar_nuestra_condici_n_crecer_evolucionar_la_queja_y_el_evitar_los_problemas_sin_afrontarlos_nos_estanca"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.821"
+        app:layout_constraintHorizontal_bias="0.73"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints,RtlHardcoded" />
