@@ -8,30 +8,28 @@ import androidx.recyclerview.widget.RecyclerView
 import java.text.SimpleDateFormat
 import java.util.*
 
-class EmergenciaAdapter(private val emergencias: List<Emergencia>) :
-    RecyclerView.Adapter<EmergenciaAdapter.EmergenciaViewHolder>() {
+class EmergenciaAdapter(private val lista: List<Emergencia>) :
+    RecyclerView.Adapter<EmergenciaAdapter.ViewHolder>() {
 
-    private val dateFormat = SimpleDateFormat("dd/MM/yyyy HH:mm", Locale.getDefault())
-
-    // Clase ViewHolder que contiene las vistas
-    class EmergenciaViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val tvFecha: TextView = itemView.findViewById(R.id.tvFecha)
-        val tvMensaje: TextView = itemView.findViewById(R.id.tvMensaje)
+    class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+        val mensaje: TextView = view.findViewById(R.id.mensajeText)
+        val fecha: TextView = view.findViewById(R.id.fechaText)
     }
 
-
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): EmergenciaViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context)
             .inflate(R.layout.activity_item_emergencia, parent, false)
-        return EmergenciaViewHolder(view)
+        return ViewHolder(view)
     }
 
-    override fun onBindViewHolder(holder: EmergenciaViewHolder, position: Int) {
-        val emergencia = emergencias[position]
-        holder.tvFecha.text = dateFormat.format(emergencia.timestamp)
-        holder.tvMensaje.text = emergencia.mensaje
-    }
+    override fun getItemCount(): Int = lista.size
 
-    // Método requerido: Retornar el número de ítems
-    override fun getItemCount(): Int = emergencias.size
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+        val emergencia = lista[position]
+        val formato = SimpleDateFormat("dd/MM/yyyy HH:mm", Locale.getDefault())
+        val fechaFormateada = emergencia.timestamp?.let { formato.format(it) } ?: "Sin fecha"
+
+        holder.mensaje.text = emergencia.mensaje
+        holder.fecha.text = fechaFormateada
+    }
 }
