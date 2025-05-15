@@ -1,48 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HistorialEmergencia">
+    android:background="@drawable/registros_fondoaa">
 
-    <RelativeLayout
+    <!-- Texto inspiracional superior -->
+    <TextView
+        android:id="@+id/textView30"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/old_italic"
+        android:text="Historial de Emergencias"
+        android:textSize="18sp"/>
+
+    <!-- Contenedor principal centrado -->
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/fondo"
-        android:padding="16dp">
+        android:layout_below="@id/textView30"
+        android:layout_above="@+id/bottomSpace"
+        android:fillViewport="true">
 
-        <TextView
-            android:id="@+id/textView31"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="90dp"
-            android:fontFamily="@font/old_italic"
-            android:text="@string/mis_emergencias"
-            android:textSize="32sp" />
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerViewHistorial"
+        <LinearLayout
+            android:id="@+id/containerEmergencias"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_below="@+id/textView31"
-            android:layout_above="@+id/button15"
-            android:layout_marginTop="16dp"
-            android:layout_marginBottom="16dp" />
-
-        <Button
-            android:id="@+id/button15"
-            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginBottom="26dp"
-            android:backgroundTint="#D6E0E7"
-            android:fontFamily="@font/old_italic"
-            android:text="@string/cerrar"
-            android:textColor="#000" />
-    </RelativeLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:padding="16dp">
+
+            <!-- Los registros se agregarán dinámicamente aquí -->
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Botón Cerrar -->
+    <Button
+        android:id="@+id/btnCerrar"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_above="@+id/bottomSpace"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="#D6E0E7"
+        android:fontFamily="@font/old_italic"
+        android:text="CERRAR"
+        android:textColor="#000"
+        android:textSize="16sp" />
+
+    <!-- Espacio inferior para mejor centrado -->
+    <View
+        android:id="@+id/bottomSpace"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_alignParentBottom="true"/>
+</RelativeLayout>

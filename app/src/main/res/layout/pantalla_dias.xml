@@ -12,7 +12,6 @@
         android:layout_height="194dp"
         android:layout_marginTop="32dp"
         android:background="#00FFFFFF"
-        android:contentDescription="@string/TODO"
         android:src="@drawable/ico_heart_p" />
 
     <TextView
@@ -27,7 +26,7 @@
         android:layout_marginTop="51dp"
         android:layout_marginEnd="174dp"
         android:fontFamily="@font/federant"
-        android:text="@string/_9"
+        android:text=""
         android:textColor="#202F71"
         android:textSize="68sp" />
 
@@ -40,7 +39,7 @@
         android:layout_marginTop="47dp"
         android:layout_marginBottom="130dp"
         android:fontFamily="@font/carattere"
-        android:text="@string/_9_d_as_escribiendo_tu_historia_cada_palabra_ha_sido_un_paso_en_tu_camino_de_crecimiento_sigue_adelante_sigue_escribiendo_sigue_creciendo_estamos_aqu_contigo_y_estamos_orgullosos_de_ti"
+        android:text=""
         android:textAlignment="center"
         android:textColor="#202F71"
         android:textSize="35sp" />
