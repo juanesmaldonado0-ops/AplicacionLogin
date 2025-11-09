@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/bottomSheetContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="12dp"
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/chatRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:overScrollMode="ifContentScrolls" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="8dp">
+
+            <EditText
+                android:id="@+id/messageInput"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Escribe tu pregunta..."
+                android:background="@drawable/chat_message_bg"
+                android:padding="12dp"
+                android:inputType="textMultiLine" />
+
+            <ImageButton
+                android:id="@+id/sendButton"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/asistente_button_bg"
+                android:src="@android:drawable/ic_menu_send"
+                android:tint="#FFFFFF" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

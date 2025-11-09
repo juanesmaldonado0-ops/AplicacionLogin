@@ -42,6 +42,20 @@
         android:textColor="#000000" />
 
     <Button
+        android:id="@+id/btnAsistente"
+        android:layout_width="236dp"
+        android:layout_height="89dp"
+        android:layout_gravity="end|center_vertical"
+        android:layout_marginTop="38dp"
+        android:background="@drawable/asistente_button_bg"
+        android:fontFamily="@font/old_italic"
+        android:text="🤖 Asistente Virtual"
+        android:textStyle="bold"
+        android:elevation="8dp"
+        android:textSize="18sp"
+        android:textColor="#FFFFFF" />
+
+    <Button
         android:id="@+id/btnVerRegistros"
         android:layout_width="236dp"
         android:layout_height="89dp"
