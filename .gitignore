@@ -12,4 +12,28 @@
 /captures
 .externalNativeBuild
 .cxx
+\n+# Ignore module and build outputs
+/app/build/
+/build/
+
+# IntelliJ/Android Studio
+/.idea/
+*.iml
+
+# Gradle
+.gradle/
+
+# Local SDK properties
 local.properties
+
+# CI logs and artifacts
+ci-logs/
+*.apk
+
+# OS files
+.DS_Store
+
+# Android Studio specific
+/captures/
+.externalNativeBuild/
+.cxx/
