@@ -58,5 +58,3 @@ git clone https://github.com/juanesmaldonado0-ops/AplicacionLogin.git
 ## Licencia
 
 Este proyecto está bajo la Licencia MIT - ver el archivo [LICENSE](LICENSE) para más detalles.
-
-<!-- small change to trigger CI: updated on 2025-11-09 -->
