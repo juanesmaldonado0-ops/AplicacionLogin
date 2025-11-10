@@ -35,20 +35,20 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-gradle-
 
-      - name: Install Android SDK command-line tools and packages
+      - name: Install Android SDK command-line tools and packages (capture logs)
         run: |
-          set -e
-          mkdir -p "$ANDROID_SDK_ROOT/cmdline-tools"
+          mkdir -p "$ANDROID_SDK_ROOT/cmdline-tools" "$GITHUB_WORKSPACE/ci-logs"
           cd "$ANDROID_SDK_ROOT/cmdline-tools"
-          curl -sSL "https://dl.google.com/android/repository/commandlinetools-linux-9477386_latest.zip" -o cmdline-tools.zip
-          unzip -q cmdline-tools.zip
+          # download and capture output
+          curl -sSL "https://dl.google.com/android/repository/commandlinetools-linux-9477386_latest.zip" -o cmdline-tools.zip 2>&1 | tee "$GITHUB_WORKSPACE/ci-logs/cmdline-tools-download.log"
+          unzip -q cmdline-tools.zip 2>&1 | tee -a "$GITHUB_WORKSPACE/ci-logs/cmdline-tools-download.log" || true
           mkdir -p "$ANDROID_SDK_ROOT/cmdline-tools/latest"
           mv cmdline-tools/* "$ANDROID_SDK_ROOT/cmdline-tools/latest/" || true
           export PATH="$ANDROID_SDK_ROOT/cmdline-tools/latest/bin:$PATH"
-          echo "sdk root: $ANDROID_SDK_ROOT"
-          yes | sdkmanager --sdk_root="$ANDROID_SDK_ROOT" --licenses || true
-          sdkmanager --sdk_root="$ANDROID_SDK_ROOT" "platform-tools" "platforms;android-35" "build-tools;35.0.1"
-          sdkmanager --sdk_root="$ANDROID_SDK_ROOT" --list
+          echo "sdk root: $ANDROID_SDK_ROOT" | tee "$GITHUB_WORKSPACE/ci-logs/sdkmanager.log"
+          yes | sdkmanager --sdk_root="$ANDROID_SDK_ROOT" --licenses 2>&1 | tee -a "$GITHUB_WORKSPACE/ci-logs/sdkmanager.log" || true
+          sdkmanager --sdk_root="$ANDROID_SDK_ROOT" "platform-tools" "platforms;android-35" "build-tools;35.0.1" 2>&1 | tee -a "$GITHUB_WORKSPACE/ci-logs/sdkmanager.log" || true
+          sdkmanager --sdk_root="$ANDROID_SDK_ROOT" --list 2>&1 | tee -a "$GITHUB_WORKSPACE/ci-logs/sdkmanager.log" || true
 
       - name: Show environment and files (diagnostic)
         run: |
@@ -61,8 +61,11 @@ jobs:
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
 
-      - name: Build with Gradle (stacktrace)
-        run: ./gradlew assembleDebug --no-daemon --stacktrace
+      - name: Build with Gradle (stacktrace, capture log)
+        run: |
+          mkdir -p "$GITHUB_WORKSPACE/ci-logs"
+          ./gradlew assembleDebug --no-daemon --stacktrace > "$GITHUB_WORKSPACE/ci-logs/gradle.log" 2>&1 || true
+          cat "$GITHUB_WORKSPACE/ci-logs/gradle.log" || true
 
       - name: Upload APK
         if: success()
@@ -70,6 +73,13 @@ jobs:
         with:
           name: app-debug
           path: app/build/outputs/apk/debug/app-debug.apk
+
+      - name: Upload CI logs (always)
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: ci-logs
+          path: ci-logs
 
         - name: Grant execute permission for gradlew
           run: chmod +x ./gradlew
